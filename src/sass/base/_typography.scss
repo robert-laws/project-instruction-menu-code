@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  font-family: $font-style-website-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-style-website-headings;
+}
+
+h1 {
+  font-size: $font-h1-text-size;
+}
+
+h2 {
+  font-size: $font-h2-text-size;
+}
+
+h3 {
+  font-size: $font-h3-text-size;
+}
+
+h4 {
+  font-size: $font-h4-text-size;
+}
+
+h5 {
+  font-size: $font-h5-text-size;
+}
+
+h6 {
+  font-size: $font-h6-text-size;
+}
+
+p {
+  font-size: $font-size-website-default;
+}

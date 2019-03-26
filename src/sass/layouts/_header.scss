@@ -1,0 +1,75 @@
+// HEADER
+header {
+  background-color: $color-secondary-tan;
+  border-bottom: 2px solid $color-primary-blue;
+
+  // flexbox item
+  flex: 0 10rem;
+}
+
+.site-header {
+  $self: &;
+
+  max-width: 1200px; // review optimization
+  margin: 0 auto;
+  padding: 2rem 0.2rem 1rem;
+
+  // flexbox layout
+  display: flex;
+  flex-direction: row;
+
+  &__logobox {
+
+    // flexbox layout
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    // flexbox item
+    flex: 0 45rem;
+
+    #{$self}__logo {
+
+      a {
+
+        img {
+          width: 40rem;
+        }
+      }
+    }
+
+    #{$self}__website-title {
+
+      h1 {
+
+      }
+    }
+  }
+
+  &__navigation {
+
+    // flexbox layout
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    // flexbox item
+    flex: 1;
+
+    a {
+      margin: 0 1rem;
+      font-weight: bold;
+
+      &:active,
+      &:visited {
+        color: darken($color-secondary-blue-light, 10%);
+      }
+
+      &:hover,
+      &:active {
+        color: lighten($color-secondary-blue-dark, 15%);
+      }
+    }
+  }
+}

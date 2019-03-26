@@ -1,0 +1,65 @@
+// GLOBAL DEFAULTS
+
+// CORE LAYOUTS
+body {
+  line-height: 1.65;
+  max-width: 100%; // review optimization
+  min-height: 100vh;
+  margin: 0 auto; // centers content
+
+  // flexbox layout
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  // flexbox item
+  flex: 1;
+
+  // flexbox layout
+  display: flex;
+  flex-direction: column;
+}
+
+// STANDARD ELEMENTS
+h1, h2, h3, h4, h5, h6 {
+  color: $color-primary-blue;
+}
+
+p {
+  color: $color-black;
+}
+
+ul, ol {
+  margin-left: 3rem;
+
+  li {
+    font-size: $font-size-website-default;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: $color-link-default;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-link-hover;
+  }
+}
+
+hr {
+  margin: 2rem 0;
+  opacity: 0.25;
+}
+
+div {
+  font-size: $font-size-website-default;
+}

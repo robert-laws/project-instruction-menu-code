@@ -1,0 +1,19 @@
+// FOOTER
+footer {
+  background-color: $color-secondary-blue-dark;
+
+  // flexbox item
+  flex: 0 20rem;
+}
+
+.site-footer {
+  $self: &;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+
+  p {
+    color: $color-white;
+  }
+}

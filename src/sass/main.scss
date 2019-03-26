@@ -1,21 +1,19 @@
 // ABSTRACTS
 @import "abstracts/variables";
 @import "abstracts/colors";
-@import "abstracts/global-resets";
+
+// BASE
+@import "base/reset";
+@import "base/typography";
 
 // LAYOUTS
-@import "layouts/globals";
+@import "layouts/global_defaults";
 @import "layouts/header";
-@import "layouts/main";
 @import "layouts/footer";
-@import "layouts/example-area";
 
-// COMPONENTS
-@import "components/toc";
-@import "components/forms";
-@import "components/sortable";
+// TEMPLATES
+@import "templates/drag_and_drop";
+@import "templates/info_review";
 
-// HELPERS
-@import "helpers/syntax";
-@import "helpers/table";
-@import "helpers/classes-for-test";
+// COMPONENTS (ORGANISMS)
+@import "components/instruction_card";
