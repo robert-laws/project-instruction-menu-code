@@ -8,6 +8,16 @@ $(document).ready(function() {
     placeholder: "ui-state-highlight",
     dropOnEmpty: true
   }).disableSelection();
+
+  $("#menu-step-one").click(function() {
+    var sortedIDs = $("#instruction-cards-drop-zone").sortable("toArray", {attribute: "data-custom"});
+    console.log(sortedIDs);
+    if(sortedIDs.length != 0) {
+      alert(sortedIDs);
+    } else {
+      alert('no selections')
+    }
+  });
 });
 
 $.getJSON("assets/data/instruction.json")
@@ -49,7 +59,7 @@ $.getJSON("assets/data/instruction.json")
       $(".time-input" + id).blur(function() {
         var newDataId = $(this).attr("data-id") + "-" + $(this).val();
         console.log(newDataId);
-        $(this).parent().attr("data-custom", newDataId);
+        $(this).parent().parent().parent().parent().attr("data-custom", newDataId);
       });
     })
   })

@@ -4,6 +4,7 @@ block content
   main
     section.menu
       .menu__select-zone
+        h2 Instruction Options
         ul#instruction-cards.card-connect
           //- li.instruction-card
           //-   .instruction-card__handle
@@ -27,54 +28,10 @@ block content
           //-       .instruction-card__time-default
           //-         input(type="text" value="0").time-default-input
 
-          //- li.instruction-card
-          //-   .instruction-card__handle
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-   .instruction-card__content
-          //-     .instruction-card__title
-          //-       h4 Primary Resources
-          //-     .instruction-card__description
-          //-       p description
-          //-     .instruction-card__tools
-          //-       .instruction-card__modal-link
-          //-         a(href="#") More Info
-          //-       .instruction-card__time-default
-          //-         input(type="text" value="0").time-default-input
-
-          //- li.instruction-card
-          //-   .instruction-card__handle
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-   .instruction-card__content
-          //-     .instruction-card__title
-          //-       h4 Basic HoyaSearch
-          //-     .instruction-card__description
-          //-       p description
-          //-     .instruction-card__tools
-          //-       .instruction-card__modal-link
-          //-         a(href="#") More Info
-          //-       .instruction-card__time-default
-          //-         input(type="text" value="0").time-default-input
-
       .menu__drop-zone.drop-zone
         header
           .drop-zone-component__title
-            h3 Build Your Class
+            h2 Build Your Class
           .drop-zone-component__length-minutes
             input(type="text" value="0").length-minutes-input
             p Length of your class in minutes
@@ -85,4 +42,4 @@ block content
             p Class time
             input(type="text" value="0 / 0" readonly).class-time-input
           .drop-zone-component__next-button
-            button Next Step
+            button#menu-step-one Next Step

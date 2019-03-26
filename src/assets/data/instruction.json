@@ -40,6 +40,30 @@
       "activities":[
         "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
       ]
+    },
+    {
+      "id":4,
+      "title":"Advanced HoyaSearch",
+      "description":"Use library resources to formulate and/or narrow a research topic",
+      "default_time":10,
+      "learning_outcomes":[
+        "formulate a focused, clear, relevant research question"
+      ],
+      "activities":[
+        "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
+      ]
+    },
+    {
+      "id":5,
+      "title":"Primary Resources",
+      "description":"Use library resources to formulate and/or narrow a research topic",
+      "default_time":10,
+      "learning_outcomes":[
+        "formulate a focused, clear, relevant research question"
+      ],
+      "activities":[
+        "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
+      ]
     }
   ]
 }
