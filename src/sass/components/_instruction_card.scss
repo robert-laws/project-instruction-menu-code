@@ -5,22 +5,24 @@ ul#instruction-cards {
 }
 
 li.instruction-card {
-  width: 100%;
+  
 }
 
 .instruction-card {
   $self: &;
 
   border: 2px solid $color-primary-gray;
+  background-color: $color-white;
+  margin: 1.5rem 0;
   padding: 0.8rem;
   border-radius: 1rem;
-  transition: all ease-in 0.1s;
+  transition: all 0.1s;
 
   // flexbox layout
   display: flex;
 
   &:hover {
-    transform: translate(-2px, -2px) rotate(-1deg);
+    transform: translate(-2px, -2px) rotate(-0.5deg);
     box-shadow: 2px 2px 6px #CCC;
   }
 
@@ -95,5 +97,36 @@ li.instruction-card {
         }
       }
     }
+  }
+}
+
+.card-connect {
+  list-style: none;
+}
+
+li.ui-sortable-helper {
+  background-color: lighten($color-secondary-gray, 30%);;
+  box-shadow: 0 0 8px rgba(53,41,41, .8);
+  transform: scale(1.015);
+  z-index: 100;
+}
+
+li.ui-sortable-placeholder {
+  background-color: lighten($color-secondary-gray, 20%);;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.ui-state-highlight { 
+  height: 8em; 
+  line-height: 1.2em;
+  background-color: lighten($color-secondary-tan, 20%);
+  color: lighten($color-secondary-tan, 20%);
+}
+
+.ui-dialog-content {
+  padding: 1rem;
+
+  ul {
+    margin-left: 3rem;
   }
 }

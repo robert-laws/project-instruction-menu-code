@@ -2,20 +2,20 @@ $(document).ready(function() {
   var sortedIDs = [];
 
 
-  var instructionItem = $("<li id='item-6'><span class='sort-handle'>Sample Item</span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis assumenda voluptates!</p><p>10</p><p><a id='item6' href='#'>More Information</a></p></li><div id='dialog6' title='Item # 6 Details'><p>Here are more details about Item # 6.</p></div>");
+  // var instructionItem = $("<li id='item-6'><span class='sort-handle'>Sample Item</span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis assumenda voluptates!</p><p>10</p><p><a id='item6' href='#'>More Information</a></p></li><div id='dialog6' title='Item # 6 Details'><p>Here are more details about Item # 6.</p></div>");
 
   
 
-  $("ul#select-zone").append(instructionItem);
+  // $("ul#select-zone").append(instructionItem);
 
-  $("#dialog6").dialog({
-    autoOpen: false
-  });
+  // $("#dialog6").dialog({
+  //   autoOpen: false
+  // });
 
-  $("#item6").click(function(event) {
-    event.preventDefault();
-    $("#dialog6").dialog("open");
-  });
+  // $("#item6").click(function(event) {
+  //   event.preventDefault();
+  //   $("#dialog6").dialog("open");
+  // });
 
   $("#select-zone, #drop-zone").sortable({
     connectWith: ".connect-list",

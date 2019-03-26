@@ -23,6 +23,11 @@
     align-items: center;
 
     border: 2px solid $color-black;
+
+    ul {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__drop-zone {
@@ -52,6 +57,11 @@
       flex: 1;
 
       margin: 1rem 0;
+
+      ul {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     footer {
