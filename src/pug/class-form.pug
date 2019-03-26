@@ -1,0 +1,30 @@
+extends layouts/default.pug
+
+block content
+  main
+
+    
+    p(class="hidden-val")#saved-id
+
+    form(onsubmit="return false;" novalidate)#new-class
+      h1 Review Your Class
+      ul
+        li
+          input(type="text" name="name" class="validate-this field-style field-split align-left" placeholder="Your Name" required)#faculty-name
+          input(type="text" name="date" class="validate-this field-style field-split align-right" placeholder="Course Date" required)#course-date
+
+        li
+          input(type="text" name="course" class="validate-this field-style field-split align-left" placeholder="Course Code" required)#course-name
+          input(type="text" name="time" class="validate-this field-style field-split align-right" placeholder="Course Start Time" required)#course-time
+
+        li(style="text-align: right;")
+          input(type="text" name="students" class="validate-this align-none" placeholder="Number of Students" required)#students
+          input(type="hidden" name="selections")#selections
+          p#form-errors
+
+        li
+          input(type="submit" value="Submit Class")#class-submit
+
+    #your-class
+      h3 Instruction Selections
+      ul

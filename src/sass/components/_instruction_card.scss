@@ -4,8 +4,25 @@ ul#instruction-cards {
   width: 96%;
 }
 
-li.instruction-card {
-  
+ul.outcomes-review li {
+  margin-left: 3rem;
+}
+
+#your-class {
+  margin-top: -2rem;
+}
+
+#your-class ul {
+  width: 800px;
+}
+
+.review-card {
+  border: 2px solid $color-primary-gray;
+  background-color: $color-white;
+  margin: 1.5rem 0;
+  padding: 0.8rem;
+
+  display: flex;
 }
 
 .instruction-card {

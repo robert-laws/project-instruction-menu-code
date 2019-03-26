@@ -9,15 +9,86 @@ $(document).ready(function() {
     dropOnEmpty: true
   }).disableSelection();
 
-  $("#menu-step-one").click(function() {
-    var sortedIDs = $("#instruction-cards-drop-zone").sortable("toArray", {attribute: "data-custom"});
-    console.log(sortedIDs);
-    if(sortedIDs.length != 0) {
-      alert(sortedIDs);
+  $("#course-date").datepicker({
+    showButtonPanel: true,
+    currentText: "Today"
+  });
+
+  $("#course-time").timepicker({ // built using jquery.timepicker - http://jonthornton.github.io/jquery-timepicker/
+    "scrollDefault": "now",
+    "step": 5
+  });
+
+  $("#students").spinner();
+
+  $("#class-submit").click(function() {
+    if(formValidate($(this))) {
+      // var newId = saveClass();
+      // if(newId > 0) {
+      //   $(location).attr("href", "confirmation.html?cid=" + newId);
+      // } else {
+      //   console.log("class id was not saved.");
+      // }
     } else {
-      alert('no selections')
+      $("#form-errors").html("<strong>Please fix the errors highlighted above</strong>").addClass("alert-text");
     }
   });
+
+  $.getJSON("assets/data/instruction.json")
+    .done(function(items) {
+      var classRawUrl = window.location.href.slice(window.location.href.indexOf("=") + 1);
+      var classUrl = classRawUrl.split("+");
+      var classCount = classUrl.length;
+
+      var order = 1;
+      var instructionItems = items["instruction"];
+      for(var j = 0; j < classCount; j++) {
+        for(var i = 0; i < instructionItems.length; i++) {
+          classFromUrl = parseFloat(classUrl[j].split("-")[0]);
+          currentInstructionListing = instructionItems[i]["id"];
+          if(classFromUrl == currentInstructionListing) {
+            var addInstructionItem = "";
+            var outcomes = "";
+            var assessment = "";
+
+            instructionItems[i].learning_outcomes.forEach(function(outcome) {
+              outcomes += "<li>" + outcome + "</li>"
+            })
+
+            instructionItems[i].activities.forEach(function(activity) {
+              assessment += "<li>" + activity + "</li>"
+            });
+
+            addInstructionItem = $("<ul></ul><li class='review-card'><div class='instruction-card__content'><div class='instruction-card__title'><h4>" + order + ". " + instructionItems[i]["title"] + "</h4><p>Time...</p></div><div class='instruction-card__description'><p><strong>Description</strong>: " + instructionItems[i]["description"] + "</p><p><strong>Learning Outcomes:</strong></p><ul class='outcomes-review'>" + outcomes + "</ul><p><strong>Suggested Activities:</strong></p><ul class='outcomes-review'>" + assessment + "</ul></div></div></li></ul>");
+
+            $("#your-class").append(addInstructionItem);
+
+            order++;
+          }
+        }
+      }
+    });
+
+  // $("#menu-step-one").click(function() {
+  //   var sortedIDs = $("#instruction-cards-drop-zone").sortable("toArray", {attribute: "data-custom"});
+  //   console.log(sortedIDs);
+  //   if(sortedIDs.length != 0) {
+  //     // alert(sortedIDs);
+  //   } else {
+  //     alert('Please add items to your course');
+  //   }
+  // });
+
+  $("#menu-step-one").click(function() {
+    var selections = $("#instruction-cards-drop-zone").sortable("toArray", {attribute: "data-custom"});
+    if(selections.length != 0) {
+      var url = "class-form.html?c=" + selections.join('+');
+      // console.log(url);
+      $(location).attr('href', url);
+    } else {
+      alert('Please add items to your course')
+    }
+  })
 });
 
 $.getJSON("assets/data/instruction.json")
@@ -38,7 +109,7 @@ $.getJSON("assets/data/instruction.json")
         assessment += "<li>" + activity + "</li>"
       });
 
-      var modal = "<p><strong>Brief Description:</strong> " + description + "</p><p><strong>Learning Outcomes</strong> (students will be able to:)<br><ul>" + outcomes + "</ul></p><p><strong>Activities/Assessment</strong><br><ul>" + assessment + "</ul></p>";
+      var modal = "<p><strong>Brief Description:</strong> " + description + "</p><p><strong>Learning Outcomes</strong> (students will be able to:)<br><ul>" + outcomes + "</ul></p><p><strong>Suggested Activities/Assessment</strong><br><ul>" + assessment + "</ul></p>";
 
       var instructionItem =  $("<li data-custom='" + id + "-" + time + "' id='" + id + "' class='instruction-card'><div class='instruction-card__handle ui-sortable-handle'><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div></div><div class='instruction-card__content'><div class='instruction-card__title'><h4>" + title + "</h4></div><div class='instruction-card__description'><p>" + description + "</p></div><div class='instruction-card__tools'><div class='instruction-card__modal-link'><a id='item" + id + "' href='#'>More Info</a></div><div class='instruction-card__time-default'><input class='time-input" + id + "' type='text' data-id='" + id + "' data-value='" + time + "' value='" + time + "' ></div></div></div></li><div id='dialog" + id + "' title='" + title + "'><p>" + modal + "</p></div>");
 
@@ -63,3 +134,20 @@ $.getJSON("assets/data/instruction.json")
       });
     })
   })
+
+function formValidate(element) {
+  var isValid = true;
+  var c = $(".validate-this");
+
+  $.each($(c), function(key, value) {
+    var item = "#" + value.id;
+    if($(value).val() == "") {
+      isValid = false;      
+      $(item).addClass("alert");
+    } else {
+      $(item).removeClass("alert");
+    }
+  })
+
+  return isValid;
+}
