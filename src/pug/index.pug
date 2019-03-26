@@ -2,4 +2,43 @@ extends layouts/default.pug
 
 block content
   main
-    h1 Main Content
+    section.menu
+      .menu__select-zone
+        ul#instruction-cards
+          li.instruction-card
+            .instruction-card__handle
+              .dot-row
+                .dot
+                .dot
+              .dot-row
+                .dot
+                .dot
+              .dot-row
+                .dot
+                .dot
+            .instruction-card__content
+              .instruction-card__title
+                h4 Title
+              .instruction-card__description
+                p description
+              .instruction-card__tools
+                .instruction-card__modal-link
+                  a(href="#") More Info
+                .instruction-card__time-default
+                  input(type="text" value="0").time-default-input
+
+      .menu__drop-zone.drop-zone
+        header
+          .drop-zone-component__title
+            h3 Build Your Class
+          .drop-zone-component__length-minutes
+            input(type="text" value="0").length-minutes-input
+            p Length of your class in minutes
+        section
+          ul#instruction-cards-drop-zone
+        footer
+          .drop-zone-component__class-time
+            p Class time
+            input(type="text" value="0 / 0" readonly).class-time-input
+          .drop-zone-component__next-button
+            button Next Step

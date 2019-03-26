@@ -1,0 +1,54 @@
+.drop-zone-component__title {
+  flex: 1;
+  text-align: center;
+  align-self: center;
+}
+
+.drop-zone-component__length-minutes {
+  flex: 1;
+  text-align: right;
+  align-self: center;
+
+  input {
+    width: 6rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    border-color: $color-secondary-gray;
+    margin-right: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin: 0.2rem 0;
+  }
+}
+
+.drop-zone-component__class-time {
+  flex: 1;
+  text-align: left;
+  align-self: flex-end;
+
+  display: flex;
+
+  input {
+    width: 7rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    border-color: $color-secondary-gray;
+    margin-left: 1rem;
+  }
+
+  p {
+    align-self: center;
+  }
+}
+
+.drop-zone-component__next-button {
+  flex: 1;
+  text-align: right;
+  align-self: flex-end;
+}

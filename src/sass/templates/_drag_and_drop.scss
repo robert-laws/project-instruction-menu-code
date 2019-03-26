@@ -1,0 +1,67 @@
+.menu {
+  height: 100%;
+  width: 1200px;
+  text-align: left;
+
+  // flexbox item
+  flex: 1 1 100%;
+
+  // flexbox layout
+  display: flex;
+
+  & > div {
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  &__select-zone {
+    // flexbox item
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid $color-black;
+  }
+
+  &__drop-zone {
+    // flexbox item
+    flex: 1;
+
+    // flexbox layout
+    display: flex;
+    flex-direction: column;
+
+    border: 2px dashed $color-black;
+    border-radius: 2rem;
+
+    header {
+      margin: 0 -1rem;
+      border-bottom: 2px dashed $color-black;
+
+      // flexbox item
+      flex: 0 5rem;
+
+      // flexbox layout
+      display: flex;
+    }
+
+    section {
+      // flexbox item
+      flex: 1;
+
+      margin: 1rem 0;
+    }
+
+    footer {
+      border-top: 2px dashed $color-black;
+
+      // flexbox item
+      flex: 0 6rem;
+
+      // flexbox layout
+      display: flex;
+    }
+  }
+}

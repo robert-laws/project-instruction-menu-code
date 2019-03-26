@@ -34,7 +34,7 @@ p {
 }
 
 ul, ol {
-  margin-left: 3rem;
+  
 
   li {
     font-size: $font-size-website-default;
@@ -62,4 +62,21 @@ hr {
 
 div {
   font-size: $font-size-website-default;
+}
+
+// BUTTON
+button {
+  border: none;
+  padding: 1.5rem 2rem;
+  background-color: darken($color-tertiary-blue, 4%);
+  color: $color-white;
+  border-radius: 0.5rem;
+  box-shadow: 0.5px 0.5px 3px lighten($color-primary-gray, 12%);
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: darken($color-tertiary-blue, 10%);
+  box-shadow: 0 0 4px lighten($color-primary-gray, 20%);
+  transform: translate(1px, 1px);
 }
