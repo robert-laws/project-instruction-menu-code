@@ -1,0 +1,12 @@
+mixin codeSingle(type, code)
+  pre
+    span= type
+    |
+    |#{code}
+
+mixin codeMulti(type, ...args)
+  pre
+    span= type
+    each val in args
+      |
+      |#{val}

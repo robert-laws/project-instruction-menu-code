@@ -1,0 +1,21 @@
+// ABSTRACTS
+@import "abstracts/variables";
+@import "abstracts/colors";
+@import "abstracts/global-resets";
+
+// LAYOUTS
+@import "layouts/globals";
+@import "layouts/header";
+@import "layouts/main";
+@import "layouts/footer";
+@import "layouts/example-area";
+
+// COMPONENTS
+@import "components/toc";
+@import "components/forms";
+@import "components/sortable";
+
+// HELPERS
+@import "helpers/syntax";
+@import "helpers/table";
+@import "helpers/classes-for-test";

@@ -1,0 +1,45 @@
+{
+  "instruction": [
+    {
+      "id":1,
+      "title":"Background Knowledge",
+      "description":"Find broad information on a topic and identify facts and sub-topics",
+      "default_time":15,
+      "learning_outcomes":[
+        "search the library to find reference sources",
+        "use advanced features reference databases",
+        "understand the place of reference resources within the research process"
+      ],
+      "activities": [
+        "On a piece of paper, students create Mind-Map using their topic/research question",
+        "Students find information from a reference source, like Credo or Gale databases, based on terms from the Mind-Map they have created"
+      ]
+    },
+    {
+      "id":2,
+      "title":"Basic HoyaSearch",
+      "description":"Use HoyaSearch to find and obtain books, articles, and other online resources",
+      "default_time":15,
+      "learning_outcomes":[
+        "search for and find physical books",
+        "understand how to use an item's call number to locate it within the library",
+        "search for and access online materials such as articles and e-books"
+      ],
+      "activities": [
+        "Students search and find books and articles  based on their research question. If the class is conducted in the library, students can roam the shelves to locate print material."
+      ]
+    },
+    {
+      "id":3,
+      "title":"Develop a Research Question",
+      "description":"Use library resources to formulate and/or narrow a research topic",
+      "default_time":10,
+      "learning_outcomes":[
+        "formulate a focused, clear, relevant research question"
+      ],
+      "activities":[
+        "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
+      ]
+    }
+  ]
+}

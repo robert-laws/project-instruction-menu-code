@@ -1,0 +1,77 @@
+{
+  "classes": 
+  [
+    {
+      "id": 1,
+      "instructor": "Hal Hope",
+      "course_title": "HIST 400",
+      "date": "3\/24\/2019",
+      "time": "2:00pm",
+      "students": 17,
+      "instruction": [{
+          "unit": 3,
+          "minutes": 25
+        },
+        {
+          "unit": 1,
+          "minutes": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "instructor": "Hal Hope",
+      "course_title": "HIST 400",
+      "date": "3\/24\/2019",
+      "time": "2:00pm",
+      "students": 17,
+      "instruction": [{
+          "unit": 2,
+          "minutes": 15
+        },
+        {
+          "unit": 3,
+          "minutes": 20
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "instructor": "Hal Hope",
+      "course_title": "HIST 400",
+      "date": "3\/24\/2019",
+      "time": "10:00am",
+      "students": 17,
+      "instruction": [{
+          "unit": 3,
+          "minutes": 25
+        },
+        {
+          "unit": 1,
+          "minutes": 10
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "instructor": "Jim Jupe",
+      "course_title": "MATH 201",
+      "date": "3\/28\/2019",
+      "time": "3:00pm",
+      "students": 17,
+      "instruction": [{
+          "unit": "4",
+          "minutes": "20"
+        },
+        {
+          "unit": "5",
+          "minutes": "25"
+        },
+        {
+          "unit": "2",
+          "minutes": "15"
+        }
+      ]
+    }
+  ]
+}
