@@ -6,12 +6,19 @@ $(function() {
   
   var classId = window.location.href.slice(window.location.href.indexOf("=") + 1);
 
-  $("#class-id").text(classId);
-  var title = $("#course-title");
-  var faculty = $("#faculty-name");
-  var date = $("#date");
-  var time = $("#time");
-  var students = $("#students");
+  if(classId.slice(0, 1) == "h") {
+    console.log("no cid provided");
+    $("#display-view").css("display", "none");
+
+    
+  } else {
+    $("#display-options").css("display", "none");
+    $("#class-id").text(classId);
+  var title = $("#get-course-title");
+  var faculty = $("#get-faculty-name");
+  var date = $("#get-date");
+  var time = $("#get-time");
+  var students = $("#get-students");
 
   $.getJSON("assets/data/classes.json")
     .done(function(items) {
@@ -32,8 +39,12 @@ $(function() {
           students.text(classItems[i].students);
           
           var classDetails = classItems[i].instruction;
+          var count = 1;
+          
           classDetails.forEach(function(item) {
-            getUnitDetails(item.unit);
+            var details = $("#get-class-details");
+            getUnitDetails(item.unit, count);
+            count++;
           });        
 
           break;
@@ -42,16 +53,19 @@ $(function() {
         }
       }
     })
+  }
+
+  
 });
 
-function getUnitDetails(unitId) {
-  var details = $("#class-details");
+function getUnitDetails(unitId, countVal) {
+  var details = $("#get-class-details");
   $.getJSON("assets/data/instruction.json")
     .done(function(units) {
-      var unitItems = units["instruction"];      
+      var unitItems = units["instruction"];        
       for(var i = 0; i < unitItems.length; i++) {
         if(unitItems[i].id === parseInt(unitId)) {
-          details.append("title: " + unitItems[i].title + "<br>description: " + unitItems[i].description + "<hr>");
+          details.append("<div class='instruction-details'><h5>" + countVal + ". " + unitItems[i].title + "</h5><p><strong>Description</strong>: " + unitItems[i].description + "</p></div>");
           break;
         }
       }

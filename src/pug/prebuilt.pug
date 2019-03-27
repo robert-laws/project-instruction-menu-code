@@ -1,0 +1,52 @@
+extends layouts/default.pug
+
+block content
+  main
+    section#display-options
+      h1 Prebuilt Class Example
+
+      p List of Sample Pre-built Classes
+
+      ul
+        li 
+          a(href="/prebuilt.html?cid=1") INAF 100 - Proseminar
+        li 
+          a(href="/prebuilt.html?cid=2") GOVT 060 - Comparative Political Systems
+        li 
+          a(href="/prebuilt.html?cid=3") HIST 180 - US History I
+
+    section#display-view
+      h1 Prebuilt Class Example
+
+      hr
+      
+      h4 Class Details
+      
+      span#class-id
+
+      .class-details-view
+        p
+          strong Course Title: 
+          span#get-course-title
+
+        p
+          strong Faculty Name: 
+          span#get-faculty-name
+
+        p
+          strong Course Date: 
+          span#get-date
+
+        p
+          strong Course Start Time: 
+          span#get-time
+
+        p
+          strong Number of Students: 
+          span#get-students
+
+        hr
+
+        div#get-class-details
+          p
+            strong Class Instruction Details

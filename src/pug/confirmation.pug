@@ -2,22 +2,38 @@ extends layouts/default.pug
 
 block content
   main
-    h1 Class Confirmation
+    section#display-view
+      h1 Class Confirmation
 
-    h4 Class Details
+      hr
+      
+      h4 Class Details
+      
+      span#class-id
 
-    h5#class-id
+      .class-details-view
+        p
+          strong Course Title: 
+          span#get-course-title
 
-    p#course-title
+        p
+          strong Faculty Name: 
+          span#get-faculty-name
 
-    p#faculty-name
+        p
+          strong Course Date: 
+          span#get-date
 
-    p#date
+        p
+          strong Course Start Time: 
+          span#get-time
 
-    p#time
+        p
+          strong Number of Students: 
+          span#get-students
 
-    p#students
+        hr
 
-    div#class-details
-      p
-        strong Class Details
+        div#get-class-details
+          p
+            strong Class Instruction Details

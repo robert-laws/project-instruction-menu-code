@@ -1,0 +1,45 @@
+extends layouts/default.pug
+
+block content
+  main
+    section#display-options
+      h1 Find Your Class
+
+      p Search using your name and course code
+
+
+    section#display-view
+      h1 Find Your Class
+
+      hr
+      
+      h4 Class Details
+      
+      span#class-id
+
+      .class-details-view
+        p
+          strong Course Title: 
+          span#get-course-title
+
+        p
+          strong Faculty Name: 
+          span#get-faculty-name
+
+        p
+          strong Course Date: 
+          span#get-date
+
+        p
+          strong Course Start Time: 
+          span#get-time
+
+        p
+          strong Number of Students: 
+          span#get-students
+
+        hr
+
+        div#get-class-details
+          p
+            strong Class Instruction Details
