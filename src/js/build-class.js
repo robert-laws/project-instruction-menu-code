@@ -6,7 +6,14 @@ $(document).ready(function() {
     cursor: "pointer",
     handle: ".instruction-card__handle",
     placeholder: "ui-state-highlight",
-    dropOnEmpty: true
+    dropOnEmpty: true,
+    update: function(e, ui) {
+      if (this === ui.item.parent()[0]) {
+        console.log(UpdateTimeCounter());
+        $("#time-counter").val(UpdateTimeCounter() + " / " + $("#time-input").val())
+        colorCodingTimeCounter(UpdateTimeCounter(), $("#time-input").val())
+      }
+    }
   }).disableSelection();
 
   $("#course-date").datepicker({
@@ -131,11 +138,42 @@ $.getJSON("assets/data/instruction.json")
 
       $(".time-input" + id).blur(function() {
         var newDataId = $(this).attr("data-id") + "-" + $(this).val();
-        console.log(newDataId);
+        // console.log(newDataId);
         $(this).parent().parent().parent().parent().attr("data-custom", newDataId);
+        $("#time-counter").val(UpdateTimeCounter() + " / " + $("#time-input").val());
+        colorCodingTimeCounter(UpdateTimeCounter(), $("#time-input").val())
+        console.log(UpdateTimeCounter());
       });
     })
   })
+
+$("#time-input").blur(function() {
+  $("#time-counter").val(UpdateTimeCounter() + " / " + $(this).val())
+  colorCodingTimeCounter(UpdateTimeCounter(), $(this).val())
+});
+
+function UpdateTimeCounter() {
+  var timeInput = $("#time-input").val();
+  var timeCounter = $("#time-counter");
+  var list = $("#instruction-cards-drop-zone li");
+  var total = 0;
+  list.each(function(index, value) {
+    total += parseInt(value.attributes["data-custom"].value.split("-")[1])
+  });
+  return total;
+}
+
+function colorCodingTimeCounter(requestTime, availableTime) {
+  var timeCounter = $("#time-counter");
+  timeCounter.removeClass("problem").removeClass("okay").removeClass("warning")
+  if(parseInt(requestTime) > parseInt(availableTime)) {
+    timeCounter.addClass("problem")
+  } else if(parseInt(requestTime) < parseInt(availableTime)) {
+    timeCounter.addClass("warning")
+  } else if(parseInt(requestTime) == parseInt(availableTime)) {
+    timeCounter.addClass("okay")
+  }
+}
 
 function formValidate(element) {
   var isValid = true;
