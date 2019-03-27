@@ -40,6 +40,8 @@ $(document).ready(function() {
       var classUrl = classRawUrl.split("+");
       var classCount = classUrl.length;
 
+      $("#selections").val(classRawUrl);
+
       var order = 1;
       var instructionItems = items["instruction"];
       for(var j = 0; j < classCount; j++) {

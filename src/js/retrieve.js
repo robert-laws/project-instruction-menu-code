@@ -13,7 +13,7 @@ $(function() {
   var time = $("#time");
   var students = $("#students");
 
-  $.getJSON("assets/data/test-class.json")
+  $.getJSON("assets/data/classes.json")
     .done(function(items) {
       var classItems = items["classes"];
 

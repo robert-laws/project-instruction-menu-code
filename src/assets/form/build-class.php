@@ -4,6 +4,7 @@
     $date = isset($_POST['date']) ? $_POST['date'] : null;
     $time = isset($_POST['time']) ? $_POST['time'] : null;
     $students = isset($_POST['students']) ? $_POST['students'] : null;
+    $selections = isset($_POST['selections']) ? $_POST['selections'] : null;
 
     $selectionArr = [];
 
