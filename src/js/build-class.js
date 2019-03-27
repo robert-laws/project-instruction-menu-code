@@ -23,12 +23,12 @@ $(document).ready(function() {
 
   $("#class-submit").click(function() {
     if(formValidate($(this))) {
-      // var newId = saveClass();
-      // if(newId > 0) {
-      //   $(location).attr("href", "confirmation.html?cid=" + newId);
-      // } else {
-      //   console.log("class id was not saved.");
-      // }
+      var newId = saveClass();
+      if(newId > 0) {
+        $(location).attr("href", "confirmation.html?cid=" + newId);
+      } else {
+        console.log("class id was not saved.");
+      }
     } else {
       $("#form-errors").html("<strong>Please fix the errors highlighted above</strong>").addClass("alert-text");
     }
@@ -150,4 +150,34 @@ function formValidate(element) {
   })
 
   return isValid;
+}
+
+function saveClass() {
+  var res;
+  var request;
+  var $form = $("#new-class");
+  var $inputs = $form.find("input");
+  var serializedData = $form.serialize();
+  request = $.ajax({
+    url: "../assets/form/build-class.php",
+    type: "post",
+    data: serializedData,
+    async: false
+  });
+
+  request.done(function (response, textStatus, jqXHR){
+    // Log a message to the console
+    console.log("Success, it worked!");
+    res = response;
+  });
+
+  request.fail(function (jqXHR, textStatus, errorThrown){
+    // Log the error to the console
+    console.error(
+      "The following error occurred: " + textStatus, errorThrown
+    );
+    res = 0;
+  });
+
+  return res;
 }

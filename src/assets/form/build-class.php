@@ -16,7 +16,7 @@
         array_push($instructionArr, $unit);
     }
     
-    $myFile = "../data/test-class.json";
+    $myFile = "../data/classes.json";
     
     $current_data = file_get_contents($myFile);  
     $array_data = json_decode($current_data, true);
