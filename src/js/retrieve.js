@@ -71,3 +71,33 @@ function getUnitDetails(unitId, countVal) {
       }
     });
 }
+
+
+$(function() {
+
+  $.ajaxSetup({ 
+    cache: false 
+  });
+
+  var instructionTable = $("#instruction-units").find("tbody");
+
+  $.getJSON("assets/data/instruction.json")
+    .done(function(units) {
+      var row = "even";
+      var unitItems = units["instruction"];
+      for(var i = 0; i < unitItems.length; i++) {
+        row == "even" ? row = "odd" : row = "even";
+        instructionTable.append("<tr class='row-top " + row + "'><td class='twenty'><strong>" + unitItems[i].title + "</strong></td><td class='fifteen text-right'><strong>Description:</strong></td><td>" + unitItems[i].description + "</td></tr><tr class='row-middle " + row + "'><td>Default Time: " + unitItems[i].default_time + " minutes</td><td class='fifteen text-right'><strong>Learning Outcomes:</strong></td><td><ul>" + getList(unitItems[i].learning_outcomes) + "</ul></td></tr><tr class='row-bottom " + row + "'><td></td><td class='fifteen text-right'><strong>Suggested Activities:</strong></td><td><ul>" + getList(unitItems[i].activities) + "</ul></td></tr>");
+      }
+    });
+
+  function getList(array) {
+    var result = "";
+    array.forEach(function(item) {
+      result += "<li>" + item + "</li>";
+    });
+    return result;
+  }
+
+});
+
