@@ -1,7 +1,22 @@
-form#new-class {
+form#new-class, div#new-class {
   width: 1200px;
   padding: 2rem;
 }
+
+.new-class__find {
+  height: 110px;
+
+  input[type='button'] {
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+  }
+
+  .error {
+    text-align: left;
+  }
+}
+
+
 
 #new-class {
   max-width: 800px;
@@ -65,7 +80,7 @@ form#new-class {
 }
 
 
-#new-class ul li input.align-right, #new-class input[type='submit'] {
+#new-class ul li input.align-right, #new-class input[type='submit'], #new-class input[type='button'] {
   float: right;
   font-size: 1.7rem;
 }

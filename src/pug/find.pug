@@ -7,13 +7,22 @@ block content
 
       p Search using your name and course code
 
+      #new-class
+        ul#find-form.new-class__find
+          li
+            input(type="text" name="name" class="validate-this field-style field-split align-left" placeholder="Your Name ex. John Walsh" required)#faculty-name
+            input(type="text" name="course" class="validate-this field-style field-split align-right" placeholder="Course Code ex. HIST 180" required)#course-name
+          
+          li
+            input(type="button" value="Find Your Class")#class-find
+
+            p.error.alert-text
+
 
     section#display-view
-      h1 Find Your Class
+      h1 Your Class Details
 
       hr
-      
-      h4 Class Details
       
       span#class-id
 

@@ -9,8 +9,6 @@ $(function() {
   if(classId.slice(0, 1) == "h") {
     console.log("no cid provided");
     $("#display-view").css("display", "none");
-
-    
   } else {
     $("#display-options").css("display", "none");
     $("#class-id").text(classId);
@@ -98,6 +96,34 @@ $(function() {
     });
     return result;
   }
+
+  $("#class-find").click(function(event) {
+    var search = [];
+    $("#find-form .error").text("");
+    $("#find-form input[type='text']").each(function(index, item) {
+      search.push(item.value);
+    });
+    if(search[0] == '' || search[1] == '') {
+      $("#find-form .error").text("Please enter a value in both search boxes.");
+    } else {
+      $.getJSON("assets/data/classes.json")
+        .done(function(items) {
+          var classItems = items["classes"];
+          var classId;
+          for(var i = 0; i < classItems.length; i++) {
+            if(classItems[i].instructor == search[0] && classItems[i].course_title == search[1]) {
+              classId = classItems[i].id;
+              $(location).attr("href", "find.html?cid=" + classId);
+              break;
+            } else {
+              if(i == classItems.length - 1) {
+                $("#find-form .error").text("No classes were found with the search terms name: " + search[0] + " and class: " + search[1] + ".");
+              }
+            }
+          }
+        });
+    }
+  })
 
 });
 

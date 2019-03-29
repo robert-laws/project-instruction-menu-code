@@ -65,7 +65,7 @@ div {
 }
 
 // BUTTON
-button, input[type="submit"] {
+button, input[type="submit"], input[type='button'] {
   border: none;
   padding: 1rem 1.5rem;
   cursor: pointer;
@@ -77,7 +77,7 @@ button, input[type="submit"] {
   transition: all 0.2s;
 }
 
-button:hover, input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover, input[type='button']:hover {
   background-color: darken($color-tertiary-blue, 10%);
   box-shadow: 0 0 4px lighten($color-primary-gray, 20%);
   transform: translate(1px, 1px);
