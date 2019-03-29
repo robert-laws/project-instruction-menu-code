@@ -160,7 +160,16 @@ function UpdateTimeCounter() {
   list.each(function(index, value) {
     total += parseInt(value.attributes["data-custom"].value.split("-")[1])
   });
+  hideShowBackgroundText(total);
   return total;
+}
+
+function hideShowBackgroundText(totalTime) {
+  if(totalTime <= 0) {
+    $("#instruction-cards-drop-zone").addClass("bgImage");
+  } else {
+    $("#instruction-cards-drop-zone").removeClass("bgImage");
+  }
 }
 
 function colorCodingTimeCounter(requestTime, availableTime) {
