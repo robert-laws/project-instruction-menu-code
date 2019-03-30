@@ -3,73 +3,92 @@
   [
     {
       "id": 1,
-      "instructor": "Hal Hope",
-      "course_title": "HIST 400",
-      "date": "3\/24\/2019",
-      "time": "2:00pm",
+      "instructor": "Jim Reardon-Anderson",
+      "course_title": "INAF 100",
+      "date": "8\/29\/2018",
+      "time": "2:30pm",
       "students": 17,
       "instruction": [{
-          "unit": 3,
-          "minutes": 25
+          "unit": 1,
+          "minutes": 15
         },
         {
-          "unit": 1,
+          "unit": 3,
+          "minutes": 10
+        },
+        {
+          "unit": 2,
+          "minutes": 15
+        },
+        {
+          "unit": 7,
+          "minutes": 10
+        },
+        {
+          "unit": 12,
           "minutes": 10
         }
       ]
     },
     {
       "id": 2,
-      "instructor": "Hal Hope",
-      "course_title": "HIST 400",
-      "date": "3\/24\/2019",
-      "time": "2:00pm",
-      "students": 17,
+      "instructor": "Sonia Alonso",
+      "course_title": "GOVT 060",
+      "date": "9\/14\/2018",
+      "time": "10:30pm",
+      "students": 16,
       "instruction": [{
-          "unit": 2,
+          "unit": 3,
           "minutes": 15
         },
         {
-          "unit": 3,
-          "minutes": 20
+          "unit": 4,
+          "minutes": 15
+        },
+        {
+          "unit": 6,
+          "minutes": 10
+        },
+        {
+          "unit": 9,
+          "minutes": 10
+        },
+        {
+          "unit": 7,
+          "minutes": 10
+        },
+        {
+          "unit": 12,
+          "minutes": 15
         }
       ]
     },
     {
       "id": 3,
-      "instructor": "Hal Hope",
-      "course_title": "HIST 400",
-      "date": "3\/24\/2019",
+      "instructor": "Karine Walther",
+      "course_title": "HIST 180",
+      "date": "9\/21\/2018",
       "time": "10:00am",
-      "students": 17,
+      "students": 14,
       "instruction": [{
-          "unit": 3,
-          "minutes": 25
-        },
-        {
           "unit": 1,
+          "minutes": 15
+        },
+        {
+          "unit": 3,
           "minutes": 10
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "instructor": "Jim Jupe",
-      "course_title": "MATH 201",
-      "date": "3\/28\/2019",
-      "time": "3:00pm",
-      "students": 17,
-      "instruction": [{
-          "unit": "4",
-          "minutes": "20"
         },
         {
-          "unit": "5",
-          "minutes": "25"
+          "unit": 4,
+          "minutes": 10
         },
         {
-          "unit": "2",
-          "minutes": "15"
+          "unit": 7,
+          "minutes": 15
+        },
+        {
+          "unit": 5,
+          "minutes": 25
         }
       ]
     }
