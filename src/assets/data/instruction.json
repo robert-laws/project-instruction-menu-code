@@ -6,9 +6,9 @@
       "description":"Find broad information on a topic and identify facts and sub-topics",
       "default_time":15,
       "learning_outcomes":[
-        "search the library to find reference sources",
-        "use advanced features reference databases",
-        "understand the place of reference resources within the research process"
+        "Search the library to find reference sources",
+        "Use advanced features reference databases",
+        "Understand the place of reference resources within the research process"
       ],
       "activities": [
         "On a piece of paper, students create Mind-Map using their topic/research question",
@@ -21,9 +21,9 @@
       "description":"Use HoyaSearch to find and obtain books, articles, and other online resources",
       "default_time":15,
       "learning_outcomes":[
-        "search for and find physical books",
-        "understand how to use an item's call number to locate it within the library",
-        "search for and access online materials such as articles and e-books"
+        "Search for and find physical books",
+        "Understand how to use an item's call number to locate it within the library",
+        "Search for and access online materials such as articles and e-books"
       ],
       "activities": [
         "Students search and find books and articles  based on their research question. If the class is conducted in the library, students can roam the shelves to locate print material."
@@ -35,7 +35,7 @@
       "description":"Use library resources to formulate and/or narrow a research topic",
       "default_time":10,
       "learning_outcomes":[
-        "formulate a focused, clear, relevant research question"
+        "Formulate a focused, clear, relevant research question"
       ],
       "activities":[
         "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
@@ -47,7 +47,7 @@
       "description":"Use library resources to formulate and/or narrow a research topic",
       "default_time":10,
       "learning_outcomes":[
-        "formulate a focused, clear, relevant research question"
+        "Formulate a focused, clear, relevant research question"
       ],
       "activities":[
         "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
@@ -59,10 +59,157 @@
       "description":"Use library resources to formulate and/or narrow a research topic",
       "default_time":10,
       "learning_outcomes":[
-        "formulate a focused, clear, relevant research question"
+        "Formulate a focused, clear, relevant research question"
       ],
       "activities":[
         "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
+      ]
+    },
+    {
+      "id":6,
+      "title":"Expert Google Scholar",
+      "description":"Go beyond simple searching and use Google Scholar as a strategic research tool",
+      "default_time":10,
+      "learning_outcomes":[
+        "Make use the advanced search feature of Google Scholar",
+        "Apply forward and backward citation search",
+        "Learn how to export citations individually and as a list",
+        "Learn how to connect Google Scholar to the Georgetown University libraries to use integration tools",
+        "Learn how to refine search results from within the list of results"
+      ],
+      "activities":[
+        "Students are asked to complete a handout with advanced search prompts and then export the citations from the articles they foundc"
+      ]
+    },
+    {
+      "id":7,
+      "title":"Evaluate Information Sources",
+      "description":"Evaluate online information using the CRAAP method (Currency, Relevance, Authority, Accuracy, and Purpose)",
+      "default_time":10,
+      "learning_outcomes":[
+        "Evaluate information sources for Currency, Relevance, Authority, Accuracy and Purpose",
+        "Distinguish between scholarly and popular sources"
+      ],
+      "activities":[
+        "Activity where students will need to evaluate sources based on CRAAP evaluation criteria"
+      ]
+    },
+    {
+      "id":8,
+      "title":"Primary Sources",
+      "description":"What are primary sources and how to locate them",
+      "default_time":10,
+      "learning_outcomes":[
+        "Define what is a primary source ",
+        "Use the library and the internet to locate primary sources",
+        "Distinguish between primary and secondary sources"
+      ],
+      "activities":[
+        "Students are given samples of different types of primary and secondary sources and must identify them properly"
+      ]
+    },
+    {
+      "id":9,
+      "title":"Searching for News",
+      "description":"Use specialized library databases for news sources",
+      "default_time":10,
+      "learning_outcomes":[
+        "Locate newspaper and magazine articles using HoyaSearch",
+        "Search specialized databases for newspaper and magazine content including Factiva, Nexis Uni, and ProQuest Historical Newspapers"
+      ],
+      "activities":[
+        "Students are given a topic and must find news resources from one of the library's news databases"
+      ]
+    },
+    {
+      "id":10,
+      "title":"Refworks/Zotero",
+      "description":"How to use citation tools to organize and speed up the research process",
+      "default_time":10,
+      "learning_outcomes":[
+        "Add/grab/export references from HoyaSearch, Google Scholar or other websites",
+        "Organize references by folders",
+        "Cite while they write",
+        "Create bibliography",
+        "Share references"
+      ],
+      "activities":[
+        "Students find a source from HoyaSearch and a library database and export the citation successfully using either RefWorks or Zotero",
+        "Students are given a citation by the library and must import and edit it so it is correct"
+      ]
+    },
+    {
+      "id":11,
+      "title":"Subject Database Search",
+      "description":"Use specialized databases according to subject and content needed",
+      "default_time":10,
+      "learning_outcomes":[
+        "Identify database type based on information need (datasets, images, peer-reviewed journals, primary sources, and more)",
+        "Use advanced search features and techniques"
+      ],
+      "activities":[
+        "Students will use the database(s) to find materials according to their research topic",
+        "Students compare two or more databases or information sources for their usefulness"
+      ]
+    },
+    {
+      "id":12,
+      "title":"Citing Properly",
+      "description":"Understand the mechanics of proper citations and where to find guidelines on different citation standards",
+      "default_time":10,
+      "learning_outcomes":[
+        "Know where to look for assistance with citation ",
+        "Read citations",
+        "Find system generated citations and correct the mistakes, if any",
+        "Understand what copyright is, why it’s important, and when it is applicable (ex. Public domain vs. common knowledge)"
+      ],
+      "activities":[
+        "Use library resources to find system generated citations and correct the mistakes, if any"
+      ]
+    },
+    {
+      "id":13,
+      "title":"Multimedia and Copyright Guidelines",
+      "description":"Importance of copyright and how to apply it to multimedia content",
+      "default_time":10,
+      "learning_outcomes":[
+        "Learn the concepts of owned copyright, public domain, licensing statements, and Fair Use",
+        "Navigate specialized library databases for multimedia content",
+        "Navigate and evaluate an assortment of open access multimedia databases for multimedia content",
+        "Understand the unique aspects of copyright and multimedia content"
+      ],
+      "activities":[
+        "Librarian presents a multimedia source and students state how copyright may be applied either as an owned copyright, public domain, licensing statement, Fair Use"
+      ]
+    },
+    {
+      "id":14,
+      "title":"Data and Dataset searching",
+      "description":"Find, evaluate and export datasets",
+      "default_time":10,
+      "learning_outcomes":[
+        "Use specialized library databases to find datasets according to information need",
+        "Find, evaluate and use openly accessible datasets",
+        "Explore data visualization options"
+      ],
+      "activities":[
+        "Students must identify and export a dataset from databases such as database like Statista or the World Bank"
+      ]
+    },
+    {
+      "id":15,
+      "title":"Literature Review",
+      "description":"Understand the concept of a literature review and how it is structured",
+      "default_time":10,
+      "learning_outcomes":[
+        "Evaluate scope of research question",
+        "Use HoyaSearch to find materials",
+        "Use other techniques to discover materials: reference sources, forward/ backward citation search, browsing",
+        "Evaluate sources for authority and relevance",
+        "Understand the value of a citation tool for carrying out a literature review"
+      ],
+      "activities":[
+        "Librarian asks students to explain the major goals and components of a literatures"
       ]
     }
   ]

@@ -50,10 +50,13 @@ $(document).ready(function() {
       $("#selections").val(classRawUrl);
 
       var order = 1;
+      var totalTime = 0;
       var instructionItems = items["instruction"];
       for(var j = 0; j < classCount; j++) {
+        classTime = parseInt(classUrl[j].split("-")[1]);
+        totalTime += parseInt(classTime);
         for(var i = 0; i < instructionItems.length; i++) {
-          classFromUrl = parseFloat(classUrl[j].split("-")[0]);
+          classFromUrl = parseInt(classUrl[j].split("-")[0]);
           currentInstructionListing = instructionItems[i]["id"];
           if(classFromUrl == currentInstructionListing) {
             var addInstructionItem = "";
@@ -68,7 +71,7 @@ $(document).ready(function() {
               assessment += "<li>" + activity + "</li>"
             });
 
-            addInstructionItem = $("<ul></ul><li class='review-card'><div class='instruction-card__content'><div class='instruction-card__title'><h4>" + order + ". " + instructionItems[i]["title"] + "</h4><p>Time...</p></div><div class='instruction-card__description'><p><strong>Description</strong>: " + instructionItems[i]["description"] + "</p><p><strong>Learning Outcomes:</strong></p><ul class='outcomes-review'>" + outcomes + "</ul><p><strong>Suggested Activities:</strong></p><ul class='outcomes-review'>" + assessment + "</ul></div></div></li></ul>");
+            addInstructionItem = $("<ul></ul><li class='review-card'><div class='instruction-card__content'><div class='instruction-card__title'><h4>" + order + ". " + instructionItems[i]["title"] + "</h4><p>Time for Instruction: " + classTime + " minutes</p></div><div class='instruction-card__description'><p><strong>Description</strong>: " + instructionItems[i]["description"] + "</p><p><strong>Learning Outcomes:</strong></p><ul class='outcomes-review'>" + outcomes + "</ul><p><strong>Suggested Activities:</strong></p><ul class='outcomes-review'>" + assessment + "</ul></div></div></li></ul>");
 
             $("#your-class").append(addInstructionItem);
 
@@ -76,6 +79,7 @@ $(document).ready(function() {
           }
         }
       }
+      $("#total-time").text("- Total Class time: " + totalTime + " minutes");
     });
 
   // $("#menu-step-one").click(function() {
