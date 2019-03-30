@@ -9,11 +9,20 @@
     .instruction-details {
       margin-left: 1rem;
       margin-bottom: 2.5rem;
+
+      li {
+        margin-left: 3rem;
+      }
     }
   
     #get-class-details {
       margin-top: 1rem;
     }
+
+    h4 {
+      margin: 1rem 0 1.5rem;
+    }
+    
   
     p {
       margin: 1rem 0;

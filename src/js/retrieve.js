@@ -12,15 +12,16 @@ $(function() {
   } else {
     $("#display-options").css("display", "none");
     $("#class-id").text(classId);
-  var title = $("#get-course-title");
-  var faculty = $("#get-faculty-name");
-  var date = $("#get-date");
-  var time = $("#get-time");
-  var students = $("#get-students");
+    var title = $("#get-course-title");
+    var faculty = $("#get-faculty-name");
+    var date = $("#get-date");
+    var time = $("#get-time");
+    var students = $("#get-students");
 
   $.getJSON("assets/data/classes.json")
     .done(function(items) {
       var classItems = items["classes"];
+      var totalTime = 0;
 
       if(classId == 0) {
         var len = classItems.length - 1;
@@ -41,7 +42,8 @@ $(function() {
           
           classDetails.forEach(function(item) {
             var details = $("#get-class-details");
-            getUnitDetails(item.unit, count);
+            getUnitDetails(item.unit, item.minutes, count);
+            totalTime += parseInt(item.minutes);
             count++;
           });        
 
@@ -50,25 +52,35 @@ $(function() {
           title.text("No class information.")
         }
       }
+      if(totalTime > 0) {
+        $("#total-time-review").text(" - Total Instruction Time: " + totalTime + " minutes");
+      }
     })
   }
-
-  
 });
 
-function getUnitDetails(unitId, countVal) {
+function getList(array) {
+  var result = "";
+  array.forEach(function(item) {
+    result += "<li>" + item + "</li>";
+  });
+  return result;
+}
+
+function getUnitDetails(unitId, minutes, countVal) {
   var details = $("#get-class-details");
   $.getJSON("assets/data/instruction.json")
     .done(function(units) {
       var unitItems = units["instruction"];        
       for(var i = 0; i < unitItems.length; i++) {
         if(unitItems[i].id === parseInt(unitId)) {
-          details.append("<div class='instruction-details'><h5>" + countVal + ". " + unitItems[i].title + "</h5><p><strong>Description</strong>: " + unitItems[i].description + "</p></div>");
+          details.append("<div class='instruction-details'><h5>" + countVal + ". " + unitItems[i].title + "</h5><p><strong>Instruction Time:</strong> " + minutes + " minutes</p><p><strong>Instruction Description</strong>: " + unitItems[i].description + "</p><ul><p><strong>Learning Outcomes:</strong></p>" + getList(unitItems[i].learning_outcomes) + "</ul><ul><p><strong>Suggested Activities:</strong></p>" + getList(unitItems[i].activities) + "</ul><hr></div>");
           break;
         }
       }
     });
 }
+
 
 
 $(function() {
