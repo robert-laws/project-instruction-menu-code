@@ -4,7 +4,16 @@ form#new-class, div#new-class {
 }
 
 .new-class__find {
-  height: 110px;
+  height: 130px;
+
+  input[type='text'] {
+    min-width: 400px;
+    margin: 0 1rem;
+  }
+
+  input[type='text']:first-child {
+    margin-left: -2rem;
+  }
 
   input[type='button'] {
     margin-top: 2.5rem;
@@ -16,10 +25,8 @@ form#new-class, div#new-class {
   }
 }
 
-
-
 #new-class {
-  max-width: 800px;
+  max-width: 1200px;
   background: #FAFAFA;
   padding: 30px;
   margin: 50px auto;
