@@ -1,22 +1,16 @@
 .menu {
-  height: 100%;
   width: 1200px;
   text-align: left;
-
-  // flexbox item
-  flex: 1 1 100%;
-
-  // flexbox layout
-  display: flex;
+  padding-top: 1rem;
 
   & > div {
-    margin: 2rem;
+    // margin: 2rem;
     padding: 2rem;
   }
 
   &__select-zone {
-    // flexbox item
-    flex: 1;
+    float: left;
+    width: 50%;
 
     display: flex;
     flex-direction: column;
@@ -31,8 +25,16 @@
   }
 
   &__drop-zone {
+    margin-top: 3rem;
+    float: right;
+    width: 47%;
+
+    top: 5rem;
+    position: sticky;
+    position: -webkit-sticky;
+
     // flexbox item
-    flex: 1;
+    // flex: 1;
 
     // flexbox layout
     display: flex;
@@ -44,36 +46,19 @@
     header {
       margin: 0 -1rem;
       border-bottom: 2px dashed $color-black;
-
-      // flexbox item
-      flex: 0 9rem;
-
-      // flexbox layout
-      display: flex;
     }
 
     section {
-      // flexbox item
-      flex: 1;
-
       margin: 1rem 0;
 
       ul {
-        min-height: 800px;
+        min-height: 600px;
         width: 100%;
       }
     }
 
     footer {
       border-top: 2px dashed $color-black;
-
-      // flexbox item
-      flex: 0 7rem;
-
-      // flexbox layout
-      display: flex;
     }
   }
 }
-
-
