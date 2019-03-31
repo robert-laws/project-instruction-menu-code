@@ -10,14 +10,18 @@
       "students": 17,
       "instruction": [{
           "unit": 1,
+          "minutes": 5
+        },
+        {
+          "unit": 2,
+          "minutes": 15
+        },
+        {
+          "unit": 4,
           "minutes": 15
         },
         {
           "unit": 3,
-          "minutes": 10
-        },
-        {
-          "unit": 2,
           "minutes": 15
         },
         {
@@ -26,7 +30,7 @@
         },
         {
           "unit": 12,
-          "minutes": 10
+          "minutes": 15
         }
       ]
     },
@@ -38,11 +42,11 @@
       "time": "10:30pm",
       "students": 16,
       "instruction": [{
-          "unit": 3,
+          "unit": 4,
           "minutes": 15
         },
         {
-          "unit": 4,
+          "unit": 5,
           "minutes": 15
         },
         {
@@ -71,23 +75,23 @@
       "time": "10:00am",
       "students": 14,
       "instruction": [{
-          "unit": 1,
+          "unit": 2,
           "minutes": 15
-        },
-        {
-          "unit": 3,
-          "minutes": 10
         },
         {
           "unit": 4,
           "minutes": 10
         },
         {
-          "unit": 7,
+          "unit": 5,
+          "minutes": 10
+        },
+        {
+          "unit": 8,
           "minutes": 15
         },
         {
-          "unit": 5,
+          "unit": 7,
           "minutes": 25
         }
       ]

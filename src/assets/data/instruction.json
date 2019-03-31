@@ -2,6 +2,19 @@
   "instruction": [
     {
       "id":1,
+      "title":"Get to Know the Library",
+      "description":"Introduction to library staff and services",
+      "default_time":15,
+      "learning_outcomes":[
+        "identify their personal librarian",
+        "understand the basic range of library services"
+      ],
+      "activities": [
+        "None"
+      ]
+    },
+    {
+      "id":2,
       "title":"Background Knowledge",
       "description":"Find broad information on a topic and identify facts and sub-topics",
       "default_time":15,
@@ -16,7 +29,7 @@
       ]
     },
     {
-      "id":2,
+      "id":3,
       "title":"Basic HoyaSearch",
       "description":"Use HoyaSearch to find and obtain books, articles, and other online resources",
       "default_time":15,
@@ -30,7 +43,7 @@
       ]
     },
     {
-      "id":3,
+      "id":4,
       "title":"Develop a Research Question",
       "description":"Use library resources to formulate and/or narrow a research topic",
       "default_time":10,
@@ -42,27 +55,21 @@
       ]
     },
     {
-      "id":4,
-      "title":"Advanced HoyaSearch",
-      "description":"Use library resources to formulate and/or narrow a research topic",
-      "default_time":10,
-      "learning_outcomes":[
-        "Formulate a focused, clear, relevant research question"
-      ],
-      "activities":[
-        "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
-      ]
-    },
-    {
       "id":5,
-      "title":"Primary Resources",
-      "description":"Use library resources to formulate and/or narrow a research topic",
+      "title":"Advanced HoyaSearch",
+      "description":"Develop a search strategy using the advanced features of HoyaSearch",
       "default_time":10,
       "learning_outcomes":[
-        "Formulate a focused, clear, relevant research question"
+        "break down a research question and extract concepts",
+        "Find related keywords using reference sources",
+        "Combine search terms",
+        "Search HoyaSearch for a variety of content (e- Book, peer-reviewed articles, etc.)",
+        "Locate and download the full text",
+        "Apply subject terms",
+        "Copy citations from"
       ],
       "activities":[
-        "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
+        "The librarian asks students to find at least x number of sources related to their research question using the advanced tools in HoyaSearch"
       ]
     },
     {
@@ -78,7 +85,7 @@
         "Learn how to refine search results from within the list of results"
       ],
       "activities":[
-        "Students are asked to complete a handout with advanced search prompts and then export the citations from the articles they foundc"
+        "Students are asked to complete a handout with advanced search prompts and then export the citations from the articles they found"
       ]
     },
     {
