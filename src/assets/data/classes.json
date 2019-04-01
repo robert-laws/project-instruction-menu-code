@@ -3,8 +3,9 @@
   [
     {
       "id": 1,
-      "instructor": "Jim Reardon-Anderson",
-      "course_title": "INAF 100",
+      "instructor": "Robert Laws",
+      "email": "rdl27@georgetown.edu",
+      "course_title": "LIB 100",
       "date": "8\/29\/2018",
       "time": "2:30pm",
       "students": 17,
@@ -37,6 +38,7 @@
     {
       "id": 2,
       "instructor": "Sonia Alonso",
+      "email": "sa1197@georgetown.edu",
       "course_title": "GOVT 060",
       "date": "9\/14\/2018",
       "time": "10:30pm",
@@ -70,6 +72,7 @@
     {
       "id": 3,
       "instructor": "Karine Walther",
+      "email": "kvw@georgetown.edu",
       "course_title": "HIST 180",
       "date": "9\/21\/2018",
       "time": "10:00am",
