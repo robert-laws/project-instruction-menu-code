@@ -25,10 +25,27 @@
 
     $next_id = count($array_data["classes"]) + 1;
 
+    // create json data and write to existing file
     $extra = array('id' => $next_id, 'instructor' => $name, 'email' => $email, 'course_title' => $course, 'date' => $date, 'time' => $time, 'students' => $students, 'instruction' => $instructionArr);  
     array_push($array_data["classes"], $extra);
     $final_data = json_encode($array_data);
     file_put_contents($myFile, $final_data);
+
+    // send email to faculty
+    $to = $email
+    $subject = "Library Instruction for ".$date;
+    $message = "Your library instruction for ".$date." has been saved.";
+    $from = "guqlibrary@georgetown.edu";
+    $headers = "From:" . $from;
+    mail($to, $subject, $message, $headers);
+
+    // send email to library
+    $to = "guqlibrary@georgetown.edu";
+    $subject = "Library Instruction for ".$name." on ".$date;
+    $message = "A request for library instruction for ".$name." on ".$date." has been submitted.";
+    $from = "guqlibrary@georgetown.edu";
+    $headers = "From:" . $from;
+    mail($to, $subject, $message, $headers);
 
     echo $next_id;
 ?>
