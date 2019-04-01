@@ -15,6 +15,11 @@
       li {
         margin-left: 3rem;
       }
+
+      h5 {
+        color: $color-tertiary-crimson;
+        border-bottom: 1px solid lighten($color-tertiary-crimson, 50%);
+      }
     }
   
     #get-class-details {

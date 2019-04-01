@@ -74,7 +74,7 @@ function getUnitDetails(unitId, minutes, countVal) {
       var unitItems = units["instruction"];        
       for(var i = 0; i < unitItems.length; i++) {
         if(unitItems[i].id === parseInt(unitId)) {
-          details.append("<div class='instruction-details'><h5><span style='font-size: 2rem;'>•</span> " + unitItems[i].title + "</h5><div class='detail-shift'><p><strong>Instruction Time:</strong> " + minutes + " minutes</p><p><strong>Instruction Description</strong>: " + unitItems[i].description + "</p><ul><p><strong>Learning Outcomes:</strong></p>" + getList(unitItems[i].learning_outcomes) + "</ul><ul><p><strong>Suggested Activities:</strong></p>" + getList(unitItems[i].activities) + "</ul></div><hr></div>");
+          details.append("<div class='instruction-details'><h5>" + unitItems[i].title + "</h5><div class='detail-shift'><p><strong>Instruction Time:</strong> " + minutes + " minutes</p><p><strong>Instruction Description</strong>: " + unitItems[i].description + "</p><ul><p><strong>Learning Outcomes:</strong></p>" + getList(unitItems[i].learning_outcomes) + "</ul><ul><p><strong>Suggested Activities:</strong></p>" + getList(unitItems[i].activities) + "</ul></div><hr></div>");
           break;
         }
       }
