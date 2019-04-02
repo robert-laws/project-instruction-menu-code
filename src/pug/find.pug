@@ -27,25 +27,32 @@ block content
       span#class-id
 
       .class-details-view
-        p
-          strong Faculty Name: 
-          span#get-faculty-name
+        .class-details-view__data
+          .class-details-view__data-personal
+            p
+              strong Faculty Name: 
+              span#get-faculty-name
 
-        p
-          strong Course Title: 
-          span#get-course-title
+            p
+              strong Course Title: 
+              span#get-course-title
 
-        p
-          strong Course Date: 
-          span#get-date
+            p
+              strong Course Date: 
+              span#get-date
 
-        p
-          strong Course Start Time: 
-          span#get-time
+            p
+              strong Course Start Time: 
+              span#get-time
 
-        p
-          strong Number of Students: 
-          span#get-students
+            p
+              strong Number of Students: 
+              span#get-students
+
+          .class-details-view__data-cancel
+            form(onsubmit="return false;" novalidate)#cancel-class
+              input(type="text" name="class-id" hidden)#class-remove-id
+              input(type="submit" value="Cancel this Class")#cancel-class
 
         hr
 

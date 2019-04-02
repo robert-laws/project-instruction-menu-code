@@ -12,6 +12,11 @@
   }
 
   .class-details-view {
+    &__data {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .instruction-details {
       margin-left: 1rem;
       margin-bottom: 2.5rem;

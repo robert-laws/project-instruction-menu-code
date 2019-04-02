@@ -34,9 +34,108 @@
           "minutes": 15
         }
       ]
+    },{
+      "id": 2,
+      "instructor": "Bob Cobb",
+      "email": "rdl27@georgetown.edu",
+      "course_title": "LIB 100",
+      "date": "8\/29\/2018",
+      "time": "2:30pm",
+      "students": 17,
+      "instruction": [{
+          "unit": 1,
+          "minutes": 5
+        },
+        {
+          "unit": 2,
+          "minutes": 15
+        },
+        {
+          "unit": 4,
+          "minutes": 15
+        },
+        {
+          "unit": 3,
+          "minutes": 15
+        },
+        {
+          "unit": 7,
+          "minutes": 10
+        },
+        {
+          "unit": 12,
+          "minutes": 15
+        }
+      ]
+    },{
+      "id": 3,
+      "instructor": "Kal Kool",
+      "email": "rdl27@georgetown.edu",
+      "course_title": "LIB 100",
+      "date": "8\/29\/2018",
+      "time": "2:30pm",
+      "students": 17,
+      "instruction": [{
+          "unit": 1,
+          "minutes": 5
+        },
+        {
+          "unit": 2,
+          "minutes": 15
+        },
+        {
+          "unit": 4,
+          "minutes": 15
+        },
+        {
+          "unit": 3,
+          "minutes": 15
+        },
+        {
+          "unit": 7,
+          "minutes": 10
+        },
+        {
+          "unit": 12,
+          "minutes": 15
+        }
+      ]
+    },{
+      "id": 4,
+      "instructor": "Mel Mope",
+      "email": "rdl27@georgetown.edu",
+      "course_title": "LIB 100",
+      "date": "8\/29\/2018",
+      "time": "2:30pm",
+      "students": 17,
+      "instruction": [{
+          "unit": 1,
+          "minutes": 5
+        },
+        {
+          "unit": 2,
+          "minutes": 15
+        },
+        {
+          "unit": 4,
+          "minutes": 15
+        },
+        {
+          "unit": 3,
+          "minutes": 15
+        },
+        {
+          "unit": 7,
+          "minutes": 10
+        },
+        {
+          "unit": 12,
+          "minutes": 15
+        }
+      ]
     },
     {
-      "id": 2,
+      "id": 5,
       "instructor": "Sonia Alonso",
       "email": "sa1197@georgetown.edu",
       "course_title": "GOVT 060",
@@ -70,7 +169,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 6,
       "instructor": "Karine Walther",
       "email": "kvw@georgetown.edu",
       "course_title": "HIST 180",

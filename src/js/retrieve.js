@@ -12,6 +12,7 @@ $(function() {
   } else {
     $("#display-options").css("display", "none");
     $("#class-id").text(classId);
+    $("#class-remove-id").val(classId);
     var title = $("#get-course-title");
     var faculty = $("#get-faculty-name");
     var date = $("#get-date");
@@ -136,6 +137,44 @@ $(function() {
         });
     }
   })
-
 });
 
+$("#cancel-class").click(function() {
+  var id = $("#class-remove-id");
+  var match = '-';
+  if(id.val() > 0) {
+    match = removeClass();
+    $(location).attr('href', 'https://writejson.libtech.georgetown.domains/completed.html');
+  }
+  console.log(match);
+})
+
+function removeClass() {
+  var res;
+  var request;
+  var $form = $("#cancel-class");
+  var $inputs = $form.find("input");
+  var serializedData = $form.serialize();
+  request = $.ajax({
+    url: "../assets/form/remove-class.php",
+    type: "post",
+    data: serializedData,
+    async: false
+  });
+
+  request.done(function (response, textStatus, jqXHR){
+    // Log a message to the console
+    console.log("Success, remove a class worked!");
+    res = response;
+  });
+
+  request.fail(function (jqXHR, textStatus, errorThrown){
+    // Log the error to the console
+    console.error(
+      "The following error occurred: " + textStatus, errorThrown
+    );
+    res = 0;
+  });
+
+  return res;
+}
