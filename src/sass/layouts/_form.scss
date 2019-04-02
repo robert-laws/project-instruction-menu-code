@@ -61,6 +61,7 @@ form#new-class, div#new-class {
   outline: none;
   // border: 1px solid #B0CFE0;
   transition: all 0.30s ease-in-out;
+  margin-bottom: 1rem;
 }
 
 // #new-class ul li .field-style:focus {
@@ -99,6 +100,7 @@ form#new-class, div#new-class {
 
 #new-class ul li .spinner-text {
   width: 315px;
+  height: 31px;
 }
 
 .alert {

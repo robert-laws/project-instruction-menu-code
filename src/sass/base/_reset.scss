@@ -13,3 +13,39 @@
 html {
   box-sizing: border-box;
 }
+
+// inherit typography - browser doesn't do this by default
+input,
+textarea,
+select,
+button {
+  color: inherit; 
+  font: inherit; 
+  letter-spacing: inherit; 
+}
+
+input,
+textarea,
+button {
+  border: 1px solid lightgrey; 
+}
+
+button * {
+  pointer-events: none;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* noscript styles */
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
