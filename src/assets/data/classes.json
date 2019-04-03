@@ -3,9 +3,9 @@
   [
     {
       "id": 1,
-      "instructor": "Robert Laws",
-      "email": "rdl27@georgetown.edu",
-      "course_title": "LIB 100",
+      "instructor": "GU-Q Faculty",
+      "email": "guqlibrary@georgetown.edu",
+      "course_title": "INAF 100",
       "date": "8\/29\/2018",
       "time": "2:30pm",
       "students": 17,
@@ -15,6 +15,10 @@
         },
         {
           "unit": 2,
+          "minutes": 10
+        },
+        {
+          "unit": 3,
           "minutes": 15
         },
         {
@@ -22,25 +26,21 @@
           "minutes": 15
         },
         {
-          "unit": 3,
-          "minutes": 15
-        },
-        {
-          "unit": 7,
-          "minutes": 10
+          "unit": 11,
+          "minutes": 20
         },
         {
           "unit": 12,
-          "minutes": 15
+          "minutes": 20
         }
       ]
     },{
       "id": 2,
-      "instructor": "Bob Cobb",
-      "email": "rdl27@georgetown.edu",
-      "course_title": "LIB 100",
-      "date": "8\/29\/2018",
-      "time": "2:30pm",
+      "instructor": "GU-Q Faculty",
+      "email": "guqlibrary@georgetown.edu",
+      "course_title": "GOVT 060",
+      "date": "8\/31\/2018",
+      "time": "1:30pm",
       "students": 17,
       "instruction": [{
           "unit": 1,
@@ -48,14 +48,14 @@
         },
         {
           "unit": 2,
-          "minutes": 15
-        },
-        {
-          "unit": 4,
-          "minutes": 15
+          "minutes": 10
         },
         {
           "unit": 3,
+          "minutes": 15
+        },
+        {
+          "unit": 5,
           "minutes": 15
         },
         {
@@ -63,15 +63,15 @@
           "minutes": 10
         },
         {
-          "unit": 12,
-          "minutes": 15
+          "unit": 11,
+          "minutes": 20
         }
       ]
     },{
       "id": 3,
-      "instructor": "Kal Kool",
-      "email": "rdl27@georgetown.edu",
-      "course_title": "LIB 100",
+      "instructor": "GU-Faculty",
+      "email": "guqlibrary@georgetown.edu",
+      "course_title": "HIST 180",
       "date": "8\/29\/2018",
       "time": "2:30pm",
       "students": 17,
@@ -81,61 +81,59 @@
         },
         {
           "unit": 2,
-          "minutes": 15
-        },
-        {
-          "unit": 4,
-          "minutes": 15
+          "minutes": 10
         },
         {
           "unit": 3,
           "minutes": 15
         },
         {
-          "unit": 7,
-          "minutes": 10
+          "unit": 5,
+          "minutes": 20
         },
         {
-          "unit": 12,
-          "minutes": 15
+          "unit": 8,
+          "minutes": 25
         }
       ]
     },{
       "id": 4,
-      "instructor": "Mel Mope",
-      "email": "rdl27@georgetown.edu",
+      "instructor": "Refworks/Zotero Training",
+      "email": "guqlibrary@georgetown.edu",
       "course_title": "LIB 100",
       "date": "8\/29\/2018",
       "time": "2:30pm",
       "students": 17,
       "instruction": [{
-          "unit": 1,
-          "minutes": 5
-        },
-        {
           "unit": 2,
-          "minutes": 15
-        },
-        {
-          "unit": 4,
-          "minutes": 15
-        },
-        {
-          "unit": 3,
-          "minutes": 15
-        },
-        {
-          "unit": 7,
           "minutes": 10
         },
         {
-          "unit": 12,
-          "minutes": 15
+          "unit": 10,
+          "minutes": 45
         }
       ]
     },
     {
       "id": 5,
+      "instructor": "Multimedia Research",
+      "email": "guqlibrary@georgetown.edu",
+      "course_title": "LIB 101",
+      "date": "8\/29\/2018",
+      "time": "2:30pm",
+      "students": 17,
+      "instruction": [{
+          "unit": 7,
+          "minutes": 15
+        },
+        {
+          "unit": 13,
+          "minutes": 30
+        }
+      ]
+    },
+    {
+      "id": 6,
       "instructor": "Sonia Alonso",
       "email": "sa1197@georgetown.edu",
       "course_title": "GOVT 060",
@@ -169,7 +167,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "instructor": "Karine Walther",
       "email": "kvw@georgetown.edu",
       "course_title": "HIST 180",
