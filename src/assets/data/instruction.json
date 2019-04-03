@@ -1,223 +1,227 @@
 {
-  "instruction": [
-    {
-      "id":1,
-      "title":"Get to Know the Library",
-      "description":"Introduction to library staff and services",
-      "default_time":15,
-      "learning_outcomes":[
-        "identify their personal librarian",
-        "understand the basic range of library services"
-      ],
-      "activities": [
-        "None"
-      ]
+	"instruction": [{
+			"id": 1,
+			"title": "Get to Know the Library",
+			"description": "Introduction to library staff and services",
+			"default_time": 5,
+			"learning_outcomes": [
+				"identify their personal librarian",
+				"understand the basic range of library services"
+			],
+			"activities": [
+				"None"
+			]
     },
     {
-      "id":2,
-      "title":"Background Knowledge",
-      "description":"Find broad information on a topic and identify facts and sub-topics",
-      "default_time":15,
-      "learning_outcomes":[
-        "Search the library to find reference sources",
-        "Use advanced features reference databases",
-        "Understand the place of reference resources within the research process"
-      ],
-      "activities": [
-        "On a piece of paper, students create Mind-Map using their topic/research question",
-        "Students find information from a reference source, like Credo or Gale databases, based on terms from the Mind-Map they have created"
-      ]
-    },
-    {
-      "id":3,
-      "title":"Basic HoyaSearch",
-      "description":"Use HoyaSearch to find and obtain books, articles, and other online resources",
-      "default_time":15,
-      "learning_outcomes":[
-        "Search for and find physical books",
-        "Understand how to use an item's call number to locate it within the library",
-        "Search for and access online materials such as articles and e-books"
-      ],
-      "activities": [
-        "Students search and find books and articles  based on their research question. If the class is conducted in the library, students can roam the shelves to locate print material."
-      ]
-    },
-    {
-      "id":4,
-      "title":"Develop a Research Question",
-      "description":"Use library resources to formulate and/or narrow a research topic",
-      "default_time":10,
-      "learning_outcomes":[
-        "Formulate a focused, clear, relevant research question"
-      ],
-      "activities":[
-        "Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question."
-      ]
-    },
-    {
-      "id":5,
-      "title":"Advanced HoyaSearch",
-      "description":"Develop a search strategy using the advanced features of HoyaSearch",
-      "default_time":10,
-      "learning_outcomes":[
-        "break down a research question and extract concepts",
-        "Find related keywords using reference sources",
-        "Combine search terms",
-        "Search HoyaSearch for a variety of content (e- Book, peer-reviewed articles, etc.)",
-        "Locate and download the full text",
-        "Apply subject terms",
-        "Copy citations from"
-      ],
-      "activities":[
-        "The librarian asks students to find at least x number of sources related to their research question using the advanced tools in HoyaSearch"
-      ]
-    },
-    {
-      "id":6,
-      "title":"Expert Google Scholar",
-      "description":"Go beyond simple searching and use Google Scholar as a strategic research tool",
-      "default_time":10,
-      "learning_outcomes":[
-        "Make use the advanced search feature of Google Scholar",
-        "Apply forward and backward citation search",
-        "Learn how to export citations individually and as a list",
-        "Learn how to connect Google Scholar to the Georgetown University libraries to use integration tools",
-        "Learn how to refine search results from within the list of results"
-      ],
-      "activities":[
-        "Students are asked to complete a handout with advanced search prompts and then export the citations from the articles they found"
-      ]
-    },
-    {
-      "id":7,
-      "title":"Evaluate Information Sources",
-      "description":"Evaluate online information using the CRAAP method (Currency, Relevance, Authority, Accuracy, and Purpose)",
-      "default_time":10,
-      "learning_outcomes":[
-        "Evaluate information sources for Currency, Relevance, Authority, Accuracy and Purpose",
-        "Distinguish between scholarly and popular sources"
-      ],
-      "activities":[
-        "Activity where students will need to evaluate sources based on CRAAP evaluation criteria"
-      ]
-    },
-    {
-      "id":8,
-      "title":"Primary Sources",
-      "description":"What are primary sources and how to locate them",
-      "default_time":10,
-      "learning_outcomes":[
-        "Define what is a primary source ",
-        "Use the library and the internet to locate primary sources",
-        "Distinguish between primary and secondary sources"
-      ],
-      "activities":[
-        "Students are given samples of different types of primary and secondary sources and must identify them properly"
-      ]
-    },
-    {
-      "id":9,
-      "title":"Searching for News",
-      "description":"Use specialized library databases for news sources",
-      "default_time":10,
-      "learning_outcomes":[
-        "Locate newspaper and magazine articles using HoyaSearch",
-        "Search specialized databases for newspaper and magazine content including Factiva, Nexis Uni, and ProQuest Historical Newspapers"
-      ],
-      "activities":[
-        "Students are given a topic and must find news resources from one of the library's news databases"
-      ]
-    },
-    {
-      "id":10,
-      "title":"Refworks/Zotero",
-      "description":"How to use citation tools to organize and speed up the research process",
-      "default_time":10,
-      "learning_outcomes":[
-        "Add/grab/export references from HoyaSearch, Google Scholar or other websites",
-        "Organize references by folders",
-        "Cite while they write",
-        "Create bibliography",
-        "Share references"
-      ],
-      "activities":[
-        "Students find a source from HoyaSearch and a library database and export the citation successfully using either RefWorks or Zotero",
-        "Students are given a citation by the library and must import and edit it so it is correct"
-      ]
-    },
-    {
-      "id":11,
-      "title":"Subject Database Search",
-      "description":"Use specialized databases according to subject and content needed",
-      "default_time":10,
-      "learning_outcomes":[
-        "Identify database type based on information need (datasets, images, peer-reviewed journals, primary sources, and more)",
-        "Use advanced search features and techniques"
-      ],
-      "activities":[
-        "Students will use the database(s) to find materials according to their research topic",
-        "Students compare two or more databases or information sources for their usefulness"
-      ]
-    },
-    {
-      "id":12,
-      "title":"Citing Properly",
-      "description":"Understand the mechanics of proper citations and where to find guidelines on different citation standards",
-      "default_time":10,
-      "learning_outcomes":[
-        "Know where to look for assistance with citation ",
-        "Read citations",
-        "Find system generated citations and correct the mistakes, if any",
-        "Understand what copyright is, why it’s important, and when it is applicable (ex. Public domain vs. common knowledge)"
-      ],
-      "activities":[
-        "Use library resources to find system generated citations and correct the mistakes, if any"
-      ]
-    },
-    {
-      "id":13,
-      "title":"Multimedia and Copyright Guidelines",
-      "description":"Importance of copyright and how to apply it to multimedia content",
-      "default_time":10,
-      "learning_outcomes":[
-        "Learn the concepts of owned copyright, public domain, licensing statements, and Fair Use",
-        "Navigate specialized library databases for multimedia content",
-        "Navigate and evaluate an assortment of open access multimedia databases for multimedia content",
-        "Understand the unique aspects of copyright and multimedia content"
-      ],
-      "activities":[
-        "Librarian presents a multimedia source and students state how copyright may be applied either as an owned copyright, public domain, licensing statement, Fair Use"
-      ]
-    },
-    {
-      "id":14,
-      "title":"Data and Dataset searching",
-      "description":"Find, evaluate and export datasets",
-      "default_time":10,
-      "learning_outcomes":[
-        "Use specialized library databases to find datasets according to information need",
-        "Find, evaluate and use openly accessible datasets",
-        "Explore data visualization options"
-      ],
-      "activities":[
-        "Students must identify and export a dataset from databases such as database like Statista or the World Bank"
-      ]
-    },
-    {
-      "id":15,
-      "title":"Literature Review",
-      "description":"Understand the concept of a literature review and how it is structured",
-      "default_time":10,
-      "learning_outcomes":[
-        "Evaluate scope of research question",
-        "Use HoyaSearch to find materials",
-        "Use other techniques to discover materials: reference sources, forward/ backward citation search, browsing",
-        "Evaluate sources for authority and relevance",
-        "Understand the value of a citation tool for carrying out a literature review"
-      ],
-      "activities":[
-        "Librarian asks students to explain the major goals and components of a literatures"
-      ]
-    }
-  ]
+			"id": 2,
+			"title": "Develop a Research Question",
+			"description": "Use library resources to formulate and/or narrow a research topic",
+			"default_time": 10,
+			"learning_outcomes": [
+				"Formulate a focused, clear, relevant research question"
+			],
+			"activities": [
+				"Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question.",
+				"Students are asked to create a variation of a Concept Map (When Where, Who What): to narrow their topics. They are prompted to consider and map questions like: 'Who is affected by this topic?' 'In what geographic region is this most important?' 'Is there a specific time period to consider?'"
+			]
+		},
+		{
+			"id": 3,
+			"title": "Background Knowledge",
+			"description": "Find broad information on a topic and identify facts and sub-topics",
+			"default_time": 15,
+			"learning_outcomes": [
+				"Search the library to find reference sources",
+				"Use advanced features reference databases",
+				"Understand the place of reference resources within the research process"
+			],
+			"activities": [
+				"On a piece of paper, students create a Mind-Map of Broader/Narrower/Related keywords using their topic/research question. Students find information from a reference source, like Credo or Gale databases, based on terms from the Mind-Map they have created"
+			]
+		},
+		{
+			"id": 4,
+			"title": "Basic HoyaSearch",
+			"description": "Use HoyaSearch to find and obtain books, articles, and other online resources",
+			"default_time": 15,
+			"learning_outcomes": [
+				"Search for and find physical books",
+				"Understand how to use an item's call number to locate it within the library",
+				"Search for and access online materials such as articles and e-books"
+			],
+			"activities": [
+				"Students search and find books and articles  based on their research question. If the class is conducted in the library, students can roam the shelves to locate print material.",
+				"Content Form & Function: On a handout prepared by the librarian, students write down their topic and then search in HoyaSearch. Before clicking on any results, they are asked to pause and examine the results list. They list the most important features of the tool in the ‘What’  column and experiment with their function and purpose. Lastly, they fill out the ‘How’ and ‘Why’ columns.",
+				"Flipped-class method: students watch a video or follow a handout posted in Canvas that describes the main features of HoyaSearch. Next, students are asked to name one thing they learned, preferably in a discussion board in Canvas. In class: firstly, students are asked to find a book/article, copy the citation and find the full text. Secondly, students are shown an image and asked to think of keywords that describe it. Then they are asked to find resources in HoyaSearch based on image-related keywords. Finally, the librarians discusses with the students any questions they might have"
+			]
+		},
+		{
+			"id": 5,
+			"title": "Advanced HoyaSearch",
+			"description": "Develop a search strategy using the advanced features of HoyaSearch",
+			"default_time": 30,
+			"learning_outcomes": [
+				"break down a research question and extract concepts",
+				"Find related keywords using reference sources",
+				"Combine search terms",
+				"Search HoyaSearch for a variety of content (e- Book, peer-reviewed articles, etc.)",
+				"Locate and download the full text",
+				"Apply subject terms",
+				"Copy citations from"
+			],
+			"activities": [
+				"The librarian asks students to find at least x number of sources related to their research question using the advanced tools in HoyaSearch",
+				"Expert Hoaysearch - Index Card and Cooperative Jigsaw (focus on generating keywords and using advanced features): The librarian distributes index cards to pairs of students and assigns a research questions to each pair. Students are asked to write down keywords that they would use and next compare it to other students who were given the same RQ. Then students form larger groups and asked to complete a task (ex. Find a book, newspaper article, investigate advanced search, use filters etc). Lastly, they present their results to the rest of the class and explain how they accomplished their task"
+			]
+		},
+		{
+			"id": 6,
+			"title": "Expert Google Scholar",
+			"description": "Go beyond simple searching and use Google Scholar as a strategic research tool",
+			"default_time": 25,
+			"learning_outcomes": [
+				"Make use the advanced search feature of Google Scholar",
+				"Apply forward and backward citation search",
+				"Learn how to export citations individually and as a list",
+				"Learn how to connect Google Scholar to the Georgetown University libraries to use integration tools",
+				"Learn how to refine search results from within the list of results"
+			],
+			"activities": [
+				"Students are asked to complete a handout with advanced search prompts and then export the citations from the articles they found. Additionally, students are asked to use some of the advanced features of Scholar"
+			]
+		},
+		{
+			"id": 7,
+			"title": "Evaluate Information Sources",
+			"description": "Evaluate online information using the CRAAP method (Currency, Relevance, Authority, Accuracy, and Purpose)",
+			"default_time": 20,
+			"learning_outcomes": [
+				"Evaluate information sources for Currency, Relevance, Authority, Accuracy and Purpose",
+				"Distinguish between scholarly and popular sources"
+			],
+			"activities": [
+				"3-source annotated bibliography starter: students are asked to find 3 sources that they could use in their paper. Then they need to examine if their sources fulfill criteria based on the CRAAP method",
+				"Pro & Con (& Caveats): The librarian provides students with a statement, for ex. 'I can only use academic journal articles for my assignment', draws a 2-3 column table and discusses with them the pros and cons of this approach, based on the CRAAP criteria presented earlier"
+			]
+		},
+		{
+			"id": 8,
+			"title": "Primary Sources",
+			"description": "What are primary sources and how to locate them",
+			"default_time": 30,
+			"learning_outcomes": [
+				"Define what is a primary source ",
+				"Use the library and the internet to locate primary sources",
+				"Distinguish between primary and secondary sources"
+			],
+			"activities": [
+				"Content Form and Function: (for database-based instruction) Students are asked to explore the primary source database, examine its features carefully and fill out the ‘What’, ‘How’, ‘Why’ columns of a handout provided by the librarian",
+				"Characteristics of Different publications: students complete a handout where they categorize primary and secondary sources and evaluate their characteristics"
+			]
+		},
+		{
+			"id": 9,
+			"title": "Searching for News",
+			"description": "Use specialized library databases for news sources",
+			"default_time": 30,
+			"learning_outcomes": [
+				"Locate newspaper and magazine articles using HoyaSearch",
+				"Search specialized databases for newspaper and magazine content including Factiva, Nexis Uni, and ProQuest Historical Newspapers"
+			],
+			"activities": [
+				"In-class Research Assignment: Based on their research topic, students are asked to find newspaper articles in various library sources or the web: students are divided into groups, given the adapted handout with the different locations to explore, fill in the information and then discuss their results."
+			]
+		},
+		{
+			"id": 10,
+			"title": "Refworks/Zotero",
+			"description": "How to use citation tools to organize and speed up the research process",
+			"default_time": 45,
+			"learning_outcomes": [
+				"Add/grab/export references from HoyaSearch, Google Scholar or other websites",
+				"Organize references by folders",
+				"Cite while they write",
+				"Create bibliography",
+				"Share references"
+			],
+			"activities": [
+				"Students find a source from HoyaSearch and a library database and export the citation successfully using either RefWorks or Zotero",
+				"Students are given a citation by the library and must import and edit it so it is correct",
+				"Transfer and Apply: Students are asked to list 'ideas, techniques, strategies and tactics' in one column and in another column 'possible applications for your own research project'. Then they try to apply these on the demonstrated reference tools. Finally they discuss their results."
+			]
+		},
+		{
+			"id": 11,
+			"title": "Subject Database Search",
+			"description": "Use specialized databases according to subject and content needed",
+			"default_time": 30,
+			"learning_outcomes": [
+				"Identify database type based on information need (datasets, images, peer-reviewed journals, primary sources, and more)",
+				"Use advanced search features and techniques"
+			],
+			"activities": [
+				"Categorizing Grid: Students will use (primary sources) database(s) to find materials according to their research topic and compare sources of information for their userulness"
+			]
+		},
+		{
+			"id": 12,
+			"title": "Citing Properly",
+			"description": "Understand the mechanics of proper citations and where to find guidelines on different citation standards",
+			"default_time": 20,
+			"learning_outcomes": [
+				"Know where to look for assistance with citation ",
+				"Read citations",
+				"Find system generated citations and correct the mistakes, if any",
+				"Understand what copyright is, why it’s important, and when it is applicable (ex. Public domain vs. common knowledge)"
+			],
+			"activities": [
+				"Students are asked to: a) copy a citation from the catalog and/or a database in a preferred citation style b) create manually a citation and bibligraphic entry from a resource like an article or book c) correct a citation"
+			]
+		},
+		{
+			"id": 13,
+			"title": "Multimedia and Copyright Guidelines",
+			"description": "Importance of copyright and how to apply it to multimedia content",
+			"default_time": 30,
+			"learning_outcomes": [
+				"Learn the concepts of owned copyright, public domain, licensing statements, and Fair Use",
+				"Navigate specialized library databases for multimedia content",
+				"Navigate and evaluate an assortment of open access multimedia databases for multimedia content",
+				"Understand the unique aspects of copyright and multimedia content"
+			],
+			"activities": [
+				"Research log: The librarian asks students to find multimedia objects in a library database like Alexander Street or ARTstor for a specific topic and keep a brief research log of their process. At the end students discuss their process and why they made certain decisions."
+			]
+		},
+		{
+			"id": 14,
+			"title": "Data and Dataset searching",
+			"description": "Find, evaluate and export datasets",
+			"default_time": 30,
+			"learning_outcomes": [
+				"Use specialized library databases to find datasets according to information need",
+				"Find, evaluate and use openly accessible datasets",
+				"Explore data visualization options"
+			],
+			"activities": [
+				"Transfer and Apply: Students are asked to list 'ideas, techniques, strategies and tactics' in one column and in another column 'possible applications for your own research project'. Then they try to apply these on the demonstrated database(s). Finally they discuss their results."
+			]
+		},
+		{
+			"id": 15,
+			"title": "Literature Review",
+			"description": "Understand the concept of a literature review and how it is structured",
+			"default_time": 30,
+			"learning_outcomes": [
+				"Evaluate scope of research question",
+				"Use HoyaSearch to find materials",
+				"Use other techniques to discover materials: reference sources, forward/ backward citation search, browsing",
+				"Evaluate sources for authority and relevance",
+				"Understand the value of a citation tool for carrying out a literature review"
+			],
+			"activities": [
+				"3-2-1: The librarian asks students to fill in a handout with 3-2-1 questions (variations apply) and picks a couple of students at the end to discuss their answers and remaining questions"
+			]
+		}
+	]
 }
