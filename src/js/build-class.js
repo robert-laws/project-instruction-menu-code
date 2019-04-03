@@ -18,7 +18,10 @@ $(document).ready(function() {
 
   $("#course-date").datepicker({
     showButtonPanel: true,
-    currentText: "Today"
+    currentText: "Today",
+    beforeShow: function(input, inst){
+      $("#ui-datepicker-div").wrap("<div class='datepicker ll-skin-latoja hasDatepicker'></div>");
+    }
   });
 
   $("#course-time").timepicker({ // built using jquery.timepicker - http://jonthornton.github.io/jquery-timepicker/
