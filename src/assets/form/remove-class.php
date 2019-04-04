@@ -22,4 +22,20 @@
   $new_array = array('classes' => $classes);
   $final_data = json_encode($new_array);
   file_put_contents($myFile, $final_data);
+
+  // send email to faculty
+  $to = $email;
+  $subject = "Cancellation confirmation of Library Instruction for ".$date;
+  $message = "Your library instruction for ".$date." has been cancelled.";
+  $from = "guqlibrary@georgetown.edu";
+  $headers = "From:" . $from;
+  mail($to, $subject, $message, $headers);
+
+  // send email to library
+  $to = "guqlibrary@georgetown.edu";
+  $subject = "Library Instruction for ".$name." on ".$date." has been cancelled.";
+  $message = "A cancellation request for library instruction for ".$name." on ".$date." has been submitted.";
+  $from = "guqlibrary@georgetown.edu";
+  $headers = "From:" . $from;
+  mail($to, $subject, $message, $headers);
 ?>

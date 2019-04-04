@@ -32,7 +32,7 @@
     file_put_contents($myFile, $final_data);
 
     // send email to faculty
-    $to = $email
+    $to = $email;
     $subject = "Library Instruction for ".$date;
     $message = "Your library instruction for ".$date." has been saved.";
     $from = "guqlibrary@georgetown.edu";
