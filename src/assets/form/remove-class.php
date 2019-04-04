@@ -19,6 +19,11 @@
   }
   
   $result = array_splice($classes, intval($match_index), 1);
+
+  $name = $result[0]["instructor"];
+  $email = $result[0]["email"];
+  $date = $result[0]["date"];
+
   $new_array = array('classes' => $classes);
   $final_data = json_encode($new_array);
   file_put_contents($myFile, $final_data);
