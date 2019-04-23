@@ -6,6 +6,9 @@ block content
       .menu__select-zone
         h2 Instruction Options
         p.instructions Choose which topics will be taught in the library session by dragging and dropping the modules from the left to the right columns. Change the duration for each topic according to your needs. The total duration of the library session will be shown at the bottom.
+        .drop-zone-component__length-minutes
+          input(type="text" value="0").length-minutes-input#time-input
+          p How long is your class in minutes?
         ul#instruction-cards.card-connect
           //- li.instruction-card
           //-   .instruction-card__handle
@@ -33,9 +36,6 @@ block content
         header
           .drop-zone-component__title
             h2 Build Your Class
-          .drop-zone-component__length-minutes
-            input(type="text" value="0").length-minutes-input#time-input
-            p Length of your class in minutes
         section
           ul#instruction-cards-drop-zone.card-connect.bgImage
         footer
