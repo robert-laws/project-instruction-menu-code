@@ -1,8 +1,5 @@
-// index.html & class-form.html -> initialize jqueryui sortable, redirect to class-form.html / initialize jqueryui form elements, send saveClass() function
-$(function() {
-  // var sortedIds = [];
-
-  // index.html
+// index.html -> initialize sortable dropzone and load instruction into cards
+if($("#instruction-cards").length) {
   $("#instruction-cards, #instruction-cards-drop-zone").sortable({
     connectWith: ".card-connect",
     cursor: "pointer",
@@ -18,39 +15,58 @@ $(function() {
     }
   }).disableSelection();
 
-  // class-form.html
-  $("#course-date").datepicker({
-    showButtonPanel: true,
-    currentText: "Today",
-    beforeShow: function(input, inst){
-      $("#ui-datepicker-div").wrap("<div class='datepicker ll-skin-latoja hasDatepicker'></div>");
-    }
-  });
 
-  // class-form.html
-  $("#course-time").timepicker({ // built using jquery.timepicker - http://jonthornton.github.io/jquery-timepicker/
-    "scrollDefault": "now",
-    "step": 5
-  });
+  // index.html - load instruction.json data into the draggable cards
+  $.getJSON("assets/data/instruction.json")
+  .done(function(items) {
+    items.instruction.forEach(function(item) {
+      var id = item.id;
+      var title = item.title;
+      var description = item.description;
+      var time = item.default_time;
+      var outcomes = "";
+      var assessment = "";
 
-  // class-form.html
-  $("#students").spinner();
+      item.learning_outcomes.forEach(function(outcome) {
+        outcomes += "<li>" + outcome + "</li>"
+      })
 
-  // class-form.html
-  $("#class-submit").click(function() {
-    if(formValidate($(this))) {
-      var newId = saveClass();
-      if(newId > 0) {
-        $(location).attr("href", "confirmation.html?cid=" + newId);
-      } else {
-        console.log("class id was not saved.");
-      }
-    } else {
-      $("#form-errors").html("<strong>Please fix the errors highlighted above</strong>").addClass("alert-text");
-    }
-  });
+      item.activities.forEach(function(activity) {
+        assessment += "<li>" + activity + "</li>"
+      });
 
-  // class-form.html
+      var modal = "<p><strong>Brief Description:</strong> " + description + "</p><p><strong>Learning Outcomes</strong> (students will be able to:)<br><ul>" + outcomes + "</ul></p><p><strong>Suggested Activities/Assessment</strong><br><ul>" + assessment + "</ul></p>";
+
+      var instructionItem =  $("<li data-custom='" + id + "-" + time + "' id='" + id + "' class='instruction-card'><div class='instruction-card__handle ui-sortable-handle'><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div></div><div class='instruction-card__content'><div class='instruction-card__title'><h4>" + title + "</h4></div><div class='instruction-card__description'><p>" + description + "</p></div><div class='instruction-card__tools'><div class='instruction-card__modal-link'><a id='item" + id + "' href='#'>More Info</a></div><div class='instruction-card__time-default'><input class='time-input" + id + "' type='text' data-id='" + id + "' data-value='" + time + "' value='" + time + "' ></div></div></div></li><div id='dialog" + id + "' title='" + title + "'><p>" + modal + "</p></div>");
+
+      $("ul#instruction-cards").append(instructionItem);
+
+      $("#dialog" + id).dialog({
+        autoOpen: false,
+        modal: true,
+        minHeight: 400,
+        minWidth: 800
+      });
+    
+      $("#item" + id).click(function(event) {
+        event.preventDefault();
+        $("#dialog" + id).dialog("open");
+      });
+
+      $(".time-input" + id).blur(function() {
+        var newDataId = $(this).attr("data-id") + "-" + $(this).val();
+        // console.log(newDataId);
+        $(this).parent().parent().parent().parent().attr("data-custom", newDataId);
+        $("#time-counter").val(UpdateTimeCounter() + " / " + $("#time-input").val());
+        colorCodingTimeCounter(UpdateTimeCounter(), $("#time-input").val())
+        console.log(UpdateTimeCounter());
+      });
+    })
+  })
+}
+
+// class-form.html -> load selections from dropzone into selection review
+if($("#selections").length) {
   $.getJSON("assets/data/instruction.json")
     .done(function(items) {
       var classRawUrl = window.location.href.slice(window.location.href.indexOf("=") + 1);
@@ -91,75 +107,14 @@ $(function() {
       }
       $("#total-time").text("- Total Class time: " + totalTime + " minutes");
     });
+}
 
-  // index.html
-  $("#menu-step-one").click(function() {
-    var selections = $("#instruction-cards-drop-zone").sortable("toArray", {attribute: "data-custom"});
-    if(selections.length != 0) {
-      var url = "class-form.html?c=" + selections.join('+');
-      // console.log(url);
-      $(location).attr('href', url);
-    } else {
-      alert('Please add items to your course')
-    }
-  })
-});
-
-// index.html - load instruction.json data into the draggable cards
-$.getJSON("assets/data/instruction.json")
-.done(function(items) {
-  items.instruction.forEach(function(item) {
-    var id = item.id;
-    var title = item.title;
-    var description = item.description;
-    var time = item.default_time;
-    var outcomes = "";
-    var assessment = "";
-
-    item.learning_outcomes.forEach(function(outcome) {
-      outcomes += "<li>" + outcome + "</li>"
-    })
-
-    item.activities.forEach(function(activity) {
-      assessment += "<li>" + activity + "</li>"
-    });
-
-    var modal = "<p><strong>Brief Description:</strong> " + description + "</p><p><strong>Learning Outcomes</strong> (students will be able to:)<br><ul>" + outcomes + "</ul></p><p><strong>Suggested Activities/Assessment</strong><br><ul>" + assessment + "</ul></p>";
-
-    var instructionItem =  $("<li data-custom='" + id + "-" + time + "' id='" + id + "' class='instruction-card'><div class='instruction-card__handle ui-sortable-handle'><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div></div><div class='instruction-card__content'><div class='instruction-card__title'><h4>" + title + "</h4></div><div class='instruction-card__description'><p>" + description + "</p></div><div class='instruction-card__tools'><div class='instruction-card__modal-link'><a id='item" + id + "' href='#'>More Info</a></div><div class='instruction-card__time-default'><input class='time-input" + id + "' type='text' data-id='" + id + "' data-value='" + time + "' value='" + time + "' ></div></div></div></li><div id='dialog" + id + "' title='" + title + "'><p>" + modal + "</p></div>");
-
-    $("ul#instruction-cards").append(instructionItem);
-
-    $("#dialog" + id).dialog({
-      autoOpen: false,
-      modal: true,
-      minHeight: 400,
-      minWidth: 800
-    });
-  
-    $("#item" + id).click(function(event) {
-      event.preventDefault();
-      $("#dialog" + id).dialog("open");
-    });
-
-    $(".time-input" + id).blur(function() {
-      var newDataId = $(this).attr("data-id") + "-" + $(this).val();
-      // console.log(newDataId);
-      $(this).parent().parent().parent().parent().attr("data-custom", newDataId);
-      $("#time-counter").val(UpdateTimeCounter() + " / " + $("#time-input").val());
-      colorCodingTimeCounter(UpdateTimeCounter(), $("#time-input").val())
-      console.log(UpdateTimeCounter());
-    });
-  })
-})
-
-// retrieve class content based on a classId match in classes.json
-$(function() {
-
+// find.html, prebuilt.html, confirmation.html -> load course content into display-view
+if($("#display-view").length) {
   $.ajaxSetup({ 
     cache: false 
   });
-  
+
   var classId = window.location.href.slice(window.location.href.indexOf("=") + 1);
 
   if(classId.slice(0, 1) == "h") {
@@ -214,11 +169,10 @@ $(function() {
       }
     })
   }
-});
+}
 
-// retrieve all instruction services to display in a table on services.html page
-$(function() {
-
+// services.html -> retrieve all instruction services to display in a table
+if($("#instruction-units").length) {
   $.ajaxSetup({ 
     cache: false 
   });
@@ -234,43 +188,92 @@ $(function() {
         instructionTable.append("<tr class='row-top " + row + "'><td class='twenty instruction-title'><strong>" + unitItems[i].title + "</strong></td><td class='fifteen text-right'><strong>Description:</strong></td><td>" + unitItems[i].description + "</td></tr><tr class='row-middle " + row + "'><td><!--Default Time: " + unitItems[i].default_time + " minutes--></td><td class='fifteen text-right'><strong>Learning Outcomes:</strong></td><td><ul>" + getList(unitItems[i].learning_outcomes) + "</ul></td></tr><tr class='row-bottom " + row + "'><td></td><td class='fifteen text-right'><strong>Suggested Activities:</strong></td><td><ul>" + getList(unitItems[i].activities) + "</ul></td></tr>");
       }
     });
+}
 
-  function getList(array) {
-    var result = "";
-    array.forEach(function(item) {
-      result += "<li>" + item + "</li>";
-    });
-    return result;
-  }
-
-  $("#class-find").click(function(event) {
-    var search = [];
-    $("#find-form .error").text("");
-    $("#find-form input[type='text']").each(function(index, item) {
-      search.push(item.value);
-    });
-    if(search[0] == '' || search[1] == '') {
-      $("#find-form .error").text("Please enter a value in both search boxes.");
+// index.html -> click action for next step after course selections
+if($("#menu-step-one").length) {
+  $("#menu-step-one").click(function() {
+    var selections = $("#instruction-cards-drop-zone").sortable("toArray", {attribute: "data-custom"});
+    if(selections.length != 0) {
+      var url = "class-form.html?c=" + selections.join('+');
+      // console.log(url);
+      $(location).attr('href', url);
     } else {
-      $.getJSON("assets/data/classes.json")
-        .done(function(items) {
-          var classItems = items["classes"];
-          var classId;
-          for(var i = 0; i < classItems.length; i++) {
-            if(classItems[i].instructor == search[0] && classItems[i].course_title == search[1]) {
-              classId = classItems[i].id;
-              $(location).attr("href", "find.html?cid=" + classId);
-              break;
-            } else {
-              if(i == classItems.length - 1) {
-                $("#find-form .error").text("No classes were found with the search terms name: " + search[0] + " and class: " + search[1] + ".");
-              }
-            }
-          }
-        });
+      alert('Please add items to your course')
     }
   })
-});
+}
+
+// class-form.html
+if($("#course-date").length) {
+  $("#course-date").datepicker({
+    showButtonPanel: true,
+    currentText: "Today",
+    beforeShow: function(input, inst){
+      $("#ui-datepicker-div").wrap("<div class='datepicker ll-skin-latoja hasDatepicker'></div>");
+    }
+  });
+}
+
+// class-form.html
+if($("#course-time").length) {
+  $("#course-time").timepicker({ // built using jquery.timepicker - http://jonthornton.github.io/jquery-timepicker/
+    "scrollDefault": "now",
+    "step": 5
+  });
+}
+
+// class-form.html
+if($("#students").length) {
+  $("#students").spinner();
+}
+
+// class-form.html
+if($("#class-submit").length) {
+  $("#class-submit").click(function() {
+    if(formValidate($(this))) {
+      var newId = saveClass();
+      if(newId > 0) {
+        $(location).attr("href", "confirmation.html?cid=" + newId);
+      } else {
+        console.log("class id was not saved.");
+      }
+    } else {
+      $("#form-errors").html("<strong>Please fix the errors highlighted above</strong>").addClass("alert-text");
+    }
+  });
+}
+
+// find.html -> validates search form, retrieves class instruction data
+if($("#class-find").length) {
+  $("#class-find").click(function(event) {
+  var search = [];
+  $("#find-form .error").text("");
+  $("#find-form input[type='text']").each(function(index, item) {
+    search.push(item.value);
+  });
+  if(search[0] == '' || search[1] == '') {
+    $("#find-form .error").text("Please enter a value in both search boxes.");
+  } else {
+    $.getJSON("assets/data/classes.json")
+      .done(function(items) {
+        var classItems = items["classes"];
+        var classId;
+        for(var i = 0; i < classItems.length; i++) {
+          if(classItems[i].instructor == search[0] && classItems[i].course_title == search[1]) {
+            classId = classItems[i].id;
+            $(location).attr("href", "find.html?cid=" + classId);
+            break;
+          } else {
+            if(i == classItems.length - 1) {
+              $("#find-form .error").text("No classes were found with the search terms name: " + search[0] + " and class: " + search[1] + ".");
+            }
+          }
+        }
+      });
+    }
+  })
+}
 
 // index.html - update time counter -> update minute values and coloring of input element
 if($("#time-input").length) {
@@ -422,4 +425,12 @@ function removeClass() {
   });
 
   return res;
+}
+
+function getList(array) {
+  var result = "";
+  array.forEach(function(item) {
+    result += "<li>" + item + "</li>";
+  });
+  return result;
 }
