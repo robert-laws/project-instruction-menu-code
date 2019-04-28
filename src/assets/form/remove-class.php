@@ -21,6 +21,7 @@
   $result = array_splice($classes, intval($match_index), 1);
 
   $name = $result[0]["instructor"];
+  $course = $result[0]["course_title"];
   $email = $result[0]["email"];
   $date = $result[0]["date"];
 
@@ -31,9 +32,11 @@
   // send email to faculty
   $to = $email;
   $subject = "Cancellation confirmation of Library Instruction for ".$date;
-  $message = "Your library instruction for ".$date." has been cancelled.";
+  $message = "<h4>Your library instruction for course ".$course." on ".$date." has been cancelled.</h4>";
   $from = "guqlibrary@georgetown.edu";
-  $headers = "From:" . $from;
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+  $headers .= "From:" . $from . "\r\n";
   mail($to, $subject, $message, $headers);
 
   // send email to library
