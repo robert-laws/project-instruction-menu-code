@@ -290,7 +290,7 @@ if($("#cancel-class").length) {
     var match = '-';
     if(id.val() > 0) {
       match = removeClass();
-      $(location).attr('href', 'https://writejson.libtech.georgetown.domains/completed.html');
+      $(location).attr('href', '/completed.html');
     }
     // console.log(match);
   });
