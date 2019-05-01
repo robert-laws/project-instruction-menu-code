@@ -38,14 +38,11 @@
       "id": 2,
       "instructor": "GU-Q Faculty",
       "email": "guqlibrary@georgetown.edu",
-      "course_title": "GOVT 060",
+      "course_title": "GOVT 160",
       "date": "8\/31\/2018",
       "time": "1:30pm",
       "students": 17,
-      "instruction": [{
-          "unit": 1,
-          "minutes": 5
-        },
+      "instruction": [
         {
           "unit": 2,
           "minutes": 10
@@ -60,10 +57,6 @@
         },
         {
           "unit": 7,
-          "minutes": 10
-        },
-        {
-          "unit": 11,
           "minutes": 20
         }
       ]
@@ -75,10 +68,7 @@
       "date": "8\/29\/2018",
       "time": "2:30pm",
       "students": 17,
-      "instruction": [{
-          "unit": 1,
-          "minutes": 5
-        },
+      "instruction": [
         {
           "unit": 2,
           "minutes": 10
@@ -104,9 +94,10 @@
       "date": "8\/29\/2018",
       "time": "2:30pm",
       "students": 17,
-      "instruction": [{
-          "unit": 2,
-          "minutes": 10
+      "instruction": [
+        {
+          "unit": 12,
+          "minutes": 20
         },
         {
           "unit": 10,
@@ -122,13 +113,10 @@
       "date": "8\/29\/2018",
       "time": "2:30pm",
       "students": 17,
-      "instruction": [{
-          "unit": 7,
-          "minutes": 15
-        },
+      "instruction": [        
         {
           "unit": 13,
-          "minutes": 30
+          "minutes": 45
         }
       ]
     },
