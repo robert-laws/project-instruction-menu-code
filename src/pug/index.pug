@@ -1,47 +1,39 @@
 extends layouts/default.pug
 
 block content
-  main
-    section.menu
-      .menu__select-zone
-        h2 Instruction Options
-        p.instructions Choose which topics will be taught in the library session by dragging and dropping the modules from the left to the right columns. Change the duration for each topic according to your needs. The total duration of the library session will be shown at the bottom. Read more about 
-          a(href="/services.html") library instructional services.
-        .drop-zone-component__length-minutes
-          input(type="text" value="0").length-minutes-input#time-input
-          p How long is your class in minutes?
-        ul#instruction-cards.card-connect
-          //- li.instruction-card
-          //-   .instruction-card__handle
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-     .dot-row
-          //-       .dot
-          //-       .dot
-          //-   .instruction-card__content
-          //-     .instruction-card__title
-          //-       h4 Background Research
-          //-     .instruction-card__description
-          //-       p description
-          //-     .instruction-card__tools
-          //-       .instruction-card__modal-link
-          //-         a(href="#") More Info
-          //-       .instruction-card__time-default
-          //-         input(type="text" value="0").time-default-input
+  main.menu-home
+    section.menu-home__hero
+      .menu-home__hero-title 
+        h1 Menu of Library Instructional Services
 
-      .menu__drop-zone.drop-zone
-        header
-          .drop-zone-component__title
-            h2 Build Your Class
-        section
-          ul#instruction-cards-drop-zone.card-connect.bgImage
-        footer
-          .drop-zone-component__class-time
-            p Class time
-            input(type="text" value="0 / 0" readonly).class-time-input#time-counter
-          .drop-zone-component__next-button
-            button#menu-step-one Next Step
+    section.menu-home__cta
+      .menu-home__cta-introduction
+        h4 Create, Customize, and Request Library Instruction
+        p The library offers a range of instructional services. Use our 
+          em 'build a class' 
+          |tool to select unique instructional units and add them to a class for your students.
+      .menu-home__cta-button
+        button(onclick="window.location.href='/build.html';") Start Building a Class Now
+
+    section.menu-home__specials
+      article.menu-home__specials-item
+        .menu-home__specials-item-icon
+          a(href="/services.html")
+            img(src="/images/icon-placeholder.jpg" alt="icon")
+        .menu-home__specials-item-text
+          h5 
+            a(href="/services.html") Instructional Services Overview
+      article.menu-home__specials-item
+        .menu-home__specials-item-icon
+          a(href="/services.html")
+            img(src="/images/icon-placeholder.jpg" alt="icon")
+        .menu-home__specials-item-text
+          h5 
+            a(href="/services.html") Prebuilt Class Examples
+      article.menu-home__specials-item
+        .menu-home__specials-item-icon
+          a(href="/services.html")
+            img(src="/images/icon-placeholder.jpg" alt="icon")
+        .menu-home__specials-item-text
+          h5 
+            a(href="/services.html") Retrieve an Existing Class
