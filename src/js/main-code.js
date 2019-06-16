@@ -9,8 +9,9 @@ if($("#instruction-cards").length) {
     update: function(e, ui) {
       if (this === ui.item.parent()[0]) {
         console.log(UpdateTimeCounter());
-        $("#time-counter").val(UpdateTimeCounter() + " / " + $("#time-input").val())
-        colorCodingTimeCounter(UpdateTimeCounter(), $("#time-input").val())
+        var classTime = $("#time-input").val() == "" ? "0" : $("#time-input").val();
+        $("#time-counter").val(UpdateTimeCounter() + " / " + classTime)
+        colorCodingTimeCounter(UpdateTimeCounter(), classTime)
       }
     }
   }).disableSelection();

@@ -14,7 +14,7 @@
     },
     {
 			"id": 2,
-			"title": "Develop a Research Question",
+			"title": "Develop a Topic",
 			"description": "Use library resources to formulate and/or narrow a research topic",
 			"default_time": 10,
 			"learning_outcomes": [
@@ -22,7 +22,8 @@
 			],
 			"activities": [
 				"Students are asked to write their research question on a piece of paper or Google Docs, and examine if it passes the criteria of a well-formulated research question.",
-				"Students are asked to create a variation of a Concept Map (When Where, Who What): to narrow their topics. They are prompted to consider and map questions like: 'Who is affected by this topic?' 'In what geographic region is this most important?' 'Is there a specific time period to consider?'"
+				"Students are asked to create a variation of a Concept Map (When Where, Who What): to narrow their topics. They are prompted to consider and map questions like: 'Who is affected by this topic?' 'In what geographic region is this most important?' 'Is there a specific time period to consider?'",
+				"Shorter activity (1-5 minutes): description appears here."
 			]
 		},
 		{
