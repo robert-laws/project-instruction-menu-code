@@ -40,15 +40,11 @@ var sassOptions = {
   outputStyle: "expanded"
 }
 
-var prefixerOptions = {
-  browsers: ['last 2 versions']
-}
-
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del(['dist']);
 });
 
-gulp.task('pug', function() {
+gulp.task('pug', function () {
   var stream = gulp.src(paths.pug.src)
     .pipe(pug({
       pretty: true
@@ -57,11 +53,11 @@ gulp.task('pug', function() {
   return stream;
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   var stream = gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(prefix(prefixerOptions))
+    .pipe(prefix())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.styles.dest));
   return stream;
@@ -79,7 +75,7 @@ gulp.task('assets', function () {
   return stream;
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   var stream = gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
@@ -88,30 +84,42 @@ gulp.task('scripts', function() {
   return stream;
 });
 
-gulp.task('images', function() {
+gulp.task('images', function () {
   var stream = gulp.src(paths.images.src)
     .pipe(imagemin())
     .pipe(gulp.dest(paths.images.dest));
   return stream;
 });
 
-gulp.task('browser', function() {
+gulp.task('browser', function () {
   browserSync.init({
     server: {
       baseDir: './dist'
     }
   });
 
-  gulp.watch(paths.pug.watch, { usePolling: true, interval: 200 }, gulp.parallel('pug'))
+  gulp.watch(paths.pug.watch, {
+      usePolling: true,
+      interval: 200
+    }, gulp.parallel('pug'))
     .on('change', browserSync.reload);
 
-  gulp.watch(paths.styles.src, { usePolling: true, interval: 200 }, gulp.parallel('styles'))
+  gulp.watch(paths.styles.src, {
+      usePolling: true,
+      interval: 200
+    }, gulp.parallel('styles'))
     .on('change', browserSync.reload);
 
-  gulp.watch(paths.scripts.src, { usePolling: true, interval: 200 }, gulp.parallel('scripts'))
+  gulp.watch(paths.scripts.src, {
+      usePolling: true,
+      interval: 200
+    }, gulp.parallel('scripts'))
     .on('change', browserSync.reload);
 
-  gulp.watch(paths.images.src, { usePolling: true, interval: 200 }, gulp.parallel('images'))
+  gulp.watch(paths.images.src, {
+      usePolling: true,
+      interval: 200
+    }, gulp.parallel('images'))
     .on('change', browserSync.reload);
 });
 
@@ -123,7 +131,7 @@ gulp.task('build', gulp.series('clean',
     'assets',
     'scripts',
     'images'
-    )));
+  )));
 
 gulp.task('serve', gulp.series('clean',
   gulp.parallel(

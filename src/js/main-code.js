@@ -3,7 +3,7 @@ if($("#instruction-cards").length) {
   $("#instruction-cards, #instruction-cards-drop-zone").sortable({
     connectWith: ".card-connect",
     cursor: "pointer",
-    handle: ".instruction-card__handle",
+    handle: ".card-handle",
     placeholder: "ui-state-highlight",
     dropOnEmpty: true,
     update: function(e, ui) {
@@ -37,7 +37,7 @@ if($("#instruction-cards").length) {
 
       var modal = "<p><strong>Brief Description:</strong> " + description + "</p><p><strong>Learning Outcomes</strong> (students will be able to:)<br><ul>" + outcomes + "</ul></p><p><strong>Suggested Activities/Assessment</strong><br><ul>" + assessment + "</ul></p>";
 
-      var instructionItem =  $("<li data-custom='" + id + "-" + time + "' id='" + id + "' class='instruction-card'><div class='instruction-card__handle ui-sortable-handle'><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div></div><div class='instruction-card__content'><div class='instruction-card__title'><h4>" + title + "</h4></div><div class='instruction-card__description'><p>" + description + "</p></div><div class='instruction-card__tools'><div class='instruction-card__modal-link'><a id='item" + id + "' href='#'>More Info</a></div><div class='instruction-card__time-default'><input class='time-input" + id + "' type='text' data-id='" + id + "' data-value='" + time + "' value='" + time + "' ></div></div></div></li><div id='dialog" + id + "' title='" + title + "'><p>" + modal + "</p></div>");
+      var instructionItem =  $("<li data-custom='" + id + "-" + time + "' id='" + id + "' class='instruction-card'><div class='instruction-card__content'><div class='instruction-card__title card-handle'><h4>" + title + "</h4></div><div class='instruction-card__description'><p>" + description + "</p></div><div class='instruction-card__tools'><div class='instruction-card__modal-link'><a id='item" + id + "' href='#'>Details <img src='/images/arrow-right-circle.png'/></a></div><div class='instruction-card__time-default'><input class='time-input" + id + "' type='text' data-id='" + id + "' data-value='" + time + "' value='" + time + "' ><p>minutes</p></div></div></div><div class='instruction-card__handle ui-sortable-handle card-handle'><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div><div class='dot-row'><div class='dot'></div><div class='dot'></div></div></div></li><div id='dialog" + id + "' title='" + title + "'><p>" + modal + "</p></div>");
 
       $("ul#instruction-cards").append(instructionItem);
 
@@ -55,9 +55,10 @@ if($("#instruction-cards").length) {
 
       $(".time-input" + id).blur(function() {
         var newDataId = $(this).attr("data-id") + "-" + $(this).val();
+        var classTime = $("#time-input").val() == "" ? "0" : $("#time-input").val();
         // console.log(newDataId);
         $(this).parent().parent().parent().parent().attr("data-custom", newDataId);
-        $("#time-counter").val(UpdateTimeCounter() + " / " + $("#time-input").val());
+        $("#time-counter").val(UpdateTimeCounter() + " / " + classTime);
         colorCodingTimeCounter(UpdateTimeCounter(), $("#time-input").val())
         console.log(UpdateTimeCounter());
       });
