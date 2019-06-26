@@ -45,6 +45,14 @@
 
     #{$self}__cta-introduction {
       width: 75%;
+
+      p {
+        margin: 2rem 0;
+      }
+
+      ul {
+        margin: 2rem;
+      }
     }
 
     #{$self}__cta-button {
