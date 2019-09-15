@@ -33,18 +33,18 @@
 
     // send email to faculty
     $to = $email;
-    $subject = "Library Instruction for ".$course." on ".$date;
-    $message = "<h3>Library Instruction Details</h3><p>Your library instruction request has been saved. Please refer to the details below for your records.</p><table cellpadding='0' cellspacing='0' style='min-width: 700px;'><tbody><tr><th style='width: 33%; border: 1px solid #dfe2e5; padding: 6px 13px;'>Course Name</th><th style='width: 33%; border: 1px solid #dfe2e5; padding: 6px 13px;'>Date</th><th style='width: 33%; border: 1px solid #dfe2e5; padding: 6px 13px;'>Time</th></tr><tr><td style='border: 1px solid #dfe2e5; padding: 6px 13px;'><a href='https://menu.guqlibrary.georgetown.domains/find.html?cid=".$next_id."'>".$course."</a></td><td style='border: 1px solid #dfe2e5; padding: 6px 13px;'>".$date."</td><td style='border: 1px solid #dfe2e5; padding: 6px 13px;'>".$time."</td></tr></tbody></table><p>Please <a href='https://qatar.library.georgetown.edu/ask' target='_blank'>contact the library</a> if you have any questions.</p><div><a href='https://www.library.georgetown.edu/qatar/' target='_blank'><img alt='Georgetown University in Qatar Library' src='https://qatar.library.georgetown.edu/sites/default/files/libLogoSpiral4x2_3.png' width='278.5' style='max-width:557px; padding-bottom: 0; display: inline !important; vertical-align: bottom;'></a></div>";
+    $subject = "GU-Q Library Instruction request for ".$course." on ".$date;
+    $message = "<h3>Library Instruction Details</h3><p>Your library instruction request has been saved. Please refer to the details below for your records.</p><table cellpadding='0' cellspacing='0' style='min-width: 700px;'><tbody><tr><th style='width: 33%; border: 1px solid #dfe2e5; padding: 6px 13px;'>Course Name</th><th style='width: 33%; border: 1px solid #dfe2e5; padding: 6px 13px;'>Date</th><th style='width: 33%; border: 1px solid #dfe2e5; padding: 6px 13px;'>Time</th></tr><tr><td style='border: 1px solid #dfe2e5; padding: 6px 13px;'><a href='https://menu.guqlibrary.georgetown.domains/find.html?cid=".$next_id."'>".$course."</a></td><td style='border: 1px solid #dfe2e5; padding: 6px 13px;'>".$date."</td><td style='border: 1px solid #dfe2e5; padding: 6px 13px;'>".$time."</td></tr></tbody></table><p>Please <a href='https://qatar.library.georgetown.edu/ask-us' target='_blank'>contact the library</a> if you have any questions.</p><div><a href='https://qatar.library.georgetown.edu/' target='_blank'><img alt='Georgetown University in Qatar Library' src='https://qatar.library.georgetown.edu/sites/default/files/guq-library-logo-dark-2x.png' width='500' style='max-width:557px; padding-bottom: 0; display: inline !important; vertical-align: bottom;'></a></div>";
     $from = "guqlibrary@georgetown.edu";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     $headers .= "From:" . $from . "\r\n";
     mail($to, $subject, $message, $headers);
 
-    // send email to library
+    // send email to library email - guqlibrary@georgetown.edu
     $to = "guqlibrary@georgetown.edu";
-    $subject = "Library Instruction for ".$name." on ".$date;
-    $message = "A request for library instruction for ".$name." and course ".$course." on ".$date." has been submitted. Please forward this email to the personal library of ".$name.".";
+    $subject = "GU-Q Library Instruction request for Prof. ".$name." on ".$date;
+    $message = "<h3>Library Instruction Details</h3><p>A request for library instruction for ".$name." and course ".$course." on ".$date." has been submitted.</p><p>Details about the instruction content for this class can be found <a href='https://menu.guqlibrary.georgetown.domains/find.html?cid=".$next_id."'>here</a>.</p><p>Please forward this email to the personal library of ".$name.".</p>";
     $from = "guqlibrary@georgetown.edu";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
